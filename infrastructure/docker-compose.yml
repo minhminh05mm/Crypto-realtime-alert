@@ -1,0 +1,130 @@
+services:
+  zookeeper:
+    image: ${ZOOKEEPER_IMAGE}:${ZOOKEEPER_IMAGE_TAG}
+    container_name: ${COMPOSE_PROJECT_NAME}-zookeeper
+    restart: unless-stopped
+    environment:
+      TZ: ${TZ}
+      ZOOKEEPER_CLIENT_PORT: ${ZOOKEEPER_CLIENT_PORT}
+      ZOOKEEPER_TICK_TIME: ${ZOOKEEPER_TICK_TIME}
+    ports:
+      - "${ZOOKEEPER_CLIENT_PORT}:${ZOOKEEPER_CLIENT_PORT}"
+    networks:
+      - crypto-alert-network
+    volumes:
+      - zookeeper_data:/var/lib/zookeeper/data
+      - zookeeper_log:/var/lib/zookeeper/log
+
+  kafka:
+    image: ${KAFKA_IMAGE}:${KAFKA_IMAGE_TAG}
+    container_name: ${COMPOSE_PROJECT_NAME}-kafka
+    restart: unless-stopped
+    depends_on:
+      - zookeeper
+    environment:
+      TZ: ${TZ}
+      KAFKA_BROKER_ID: ${KAFKA_BROKER_ID}
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:${ZOOKEEPER_CLIENT_PORT}
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:${KAFKA_INTERNAL_PORT},PLAINTEXT_HOST://0.0.0.0:${KAFKA_EXTERNAL_PORT}
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:${KAFKA_INTERNAL_PORT},PLAINTEXT_HOST://${KAFKA_EXTERNAL_ADVERTISED_HOST}:${KAFKA_EXTERNAL_PORT}
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: ${KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR}
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: ${KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR}
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: ${KAFKA_TRANSACTION_STATE_LOG_MIN_ISR}
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: ${KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS}
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: ${KAFKA_AUTO_CREATE_TOPICS_ENABLE}
+    ports:
+      - "${KAFKA_EXTERNAL_PORT}:${KAFKA_EXTERNAL_PORT}"
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "cub kafka-ready -b localhost:${KAFKA_INTERNAL_PORT} 1 60"
+        ]
+      interval: 15s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+    networks:
+      - crypto-alert-network
+    volumes:
+      - kafka_data:/var/lib/kafka/data
+
+  kafka-init:
+    image: ${KAFKA_IMAGE}:${KAFKA_IMAGE_TAG}
+    container_name: ${COMPOSE_PROJECT_NAME}-kafka-init
+    depends_on:
+      kafka:
+        condition: service_healthy
+    restart: "no"
+    entrypoint: ["/bin/bash", "-lc"]
+    command:
+      - >
+        kafka-topics --bootstrap-server kafka:${KAFKA_INTERNAL_PORT}
+        --create --if-not-exists
+        --topic ${KAFKA_TOPIC_RAW_PRICES}
+        --partitions ${KAFKA_TOPIC_PARTITIONS}
+        --replication-factor ${KAFKA_TOPIC_REPLICATION_FACTOR}
+        && kafka-topics --bootstrap-server kafka:${KAFKA_INTERNAL_PORT}
+        --create --if-not-exists
+        --topic ${KAFKA_TOPIC_RAW_NEWS}
+        --partitions ${KAFKA_TOPIC_PARTITIONS}
+        --replication-factor ${KAFKA_TOPIC_REPLICATION_FACTOR}
+        && kafka-topics --bootstrap-server kafka:${KAFKA_INTERNAL_PORT} --list
+    networks:
+      - crypto-alert-network
+
+  redis:
+    image: ${REDIS_IMAGE}:${REDIS_IMAGE_TAG}
+    container_name: ${COMPOSE_PROJECT_NAME}-redis
+    restart: unless-stopped
+    command: ["redis-server", "--appendonly", "yes"]
+    ports:
+      - "${REDIS_PORT}:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+    networks:
+      - crypto-alert-network
+    volumes:
+      - redis_data:/data
+
+  clickhouse:
+    image: ${CLICKHOUSE_IMAGE}:${CLICKHOUSE_IMAGE_TAG}
+    container_name: ${COMPOSE_PROJECT_NAME}-clickhouse
+    restart: unless-stopped
+    environment:
+      TZ: ${TZ}
+      CLICKHOUSE_DB: ${CLICKHOUSE_DB}
+      CLICKHOUSE_USER: ${CLICKHOUSE_USER}
+      CLICKHOUSE_PASSWORD: ${CLICKHOUSE_PASSWORD}
+      CLICKHOUSE_DEFAULT_ACCESS_MANAGEMENT: ${CLICKHOUSE_DEFAULT_ACCESS_MANAGEMENT}
+    ports:
+      - "${CLICKHOUSE_PORT}:8123"
+      - "${CLICKHOUSE_NATIVE_PORT}:9000"
+    healthcheck:
+      test: ["CMD", "clickhouse-client", "--query", "SELECT 1"]
+      interval: 20s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+    networks:
+      - crypto-alert-network
+    volumes:
+      - clickhouse_data:/var/lib/clickhouse
+      - clickhouse_log:/var/log/clickhouse-server
+
+networks:
+  crypto-alert-network:
+    driver: bridge
+
+volumes:
+  zookeeper_data:
+  zookeeper_log:
+  kafka_data:
+  redis_data:
+  clickhouse_data:
+  clickhouse_log:

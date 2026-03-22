@@ -1,0 +1,12 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+
+# Spark/Java cache
+.ivy2/
+checkpoint/
+
+# OS
+.DS_Store
+Thumbs.db

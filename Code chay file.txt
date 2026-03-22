@@ -1,0 +1,174 @@
+HUONG DAN CHAY TOAN BO DU AN
+========================================
+
+1. Muc dich du an
+- Thu thap gia crypto thoi gian thuc tu Binance WebSocket.
+- Thu thap tin tuc crypto tu CryptoPanic API.
+- Day 2 luong du lieu vao Kafka.
+- Dung Spark Structured Streaming + FinBERT de phan tich sentiment, join gia va tin tuc.
+- Ghi ket qua canh bao vao Redis va luu lich su vao ClickHouse.
+
+2. Dieu kien can co
+- Da cai Docker va Docker Compose.
+- Da co Python 3.12.
+- Da tao file `.env`.
+- Da khoi dong duoc internet neu muon lay gia thuc te va tai model FinBERT lan dau.
+
+3. Khoi tao moi truong Python
+- Muc dich: tao moi truong ao de cai dependency rieng cho project.
+
+Lenh:
+    python3 -m venv .venv
+    source .venv/bin/activate
+    ./.venv/bin/python -m pip install --upgrade pip
+
+4. Cai dependency cho cac module Python
+- Muc dich: cai package cho Data Ingestion va Stream Processing.
+
+Lenh:
+    ./.venv/bin/python -m pip install -r data_ingestion/requirements.txt -r stream_processing/requirements.txt
+
+5. Khoi dong ha tang bang Docker
+- Muc dich: khoi dong Zookeeper, Kafka, Redis, ClickHouse.
+
+Lenh:
+    docker compose --env-file .env -f infrastructure/docker-compose.yml up -d
+
+Kiem tra nhanh:
+    docker ps
+
+5.1 Cach chay nhanh toan bo he thong bang 1 lenh
+- File duoc chay: `run.py`
+- Muc dich:
+  + Khoi dong Docker infrastructure.
+  + Kiem tra health cua Kafka, Redis, ClickHouse.
+  + Tao topic Kafka neu can.
+  + Tao database/bang ClickHouse neu chua co.
+  + Chay 3 process Python: `news_api_client`, `price_ws_client`, `spark_pipeline`.
+  + Luu log runtime vao `.runtime/logs/`.
+
+Lenh:
+    python run.py
+
+Hoac viet ro hon:
+    python run.py start
+
+File nay phu hop khi ban muon van hanh nhanh toan bo project ma khong can mo 3 terminal rieng.
+
+5.2 Cach kiem tra he thong da chay tot hay chua
+- Lenh:
+    python run.py status
+
+- Lenh tren se kiem tra:
+  + Docker containers co dang `running`/`healthy` khong.
+  + 3 process Python co con song khong.
+  + Kafka da co 2 topic `raw_prices`, `raw_news` chua.
+  + Redis da co alert key hay chua.
+  + ClickHouse da co dong lich su alert hay chua.
+
+- Cach doc ket qua:
+  + `Infra running well: YES` => ha tang dang on.
+  + `Python services running well: YES` => ingestion va Spark dang chay.
+  + `End-to-end data observed in Redis/ClickHouse: YES` => pipeline da xu ly du lieu thanh cong tu dau den cuoi.
+  + Neu dong cuoi cung la `NO`, he thong co the van dang warm-up do Spark dung window 5 phut va watermark 10 phut.
+
+5.3 Cach xem log nhanh
+- Lenh:
+    python run.py logs all --lines 40
+
+- Xem rieng tung process:
+    python run.py logs news_api_client --lines 40
+    python run.py logs price_ws_client --lines 40
+    python run.py logs spark_pipeline --lines 40
+
+5.4 Cach dung he thong
+- Dung cac process Python:
+    python run.py stop
+
+- Dung ca process Python va Docker infrastructure:
+    python run.py stop --with-infra
+
+6. Chay module lay tin tuc
+- File duoc chay: `data_ingestion/src/news_api_client.py`
+- Muc dich:
+  + Goi CryptoPanic API theo chu ky.
+  + Chuan hoa JSON schema `raw_news`.
+  + Day tin tuc vao Kafka topic `raw_news`.
+
+Lenh:
+    export PYTHONPATH=$(pwd)/data_ingestion
+    ./.venv/bin/python -m src.news_api_client
+
+7. Chay module lay gia real-time
+- File duoc chay: `data_ingestion/src/price_ws_client.py`
+- Muc dich:
+  + Ket noi Binance WebSocket.
+  + Chuan hoa JSON schema `raw_prices`.
+  + Day gia vao Kafka topic `raw_prices`.
+
+Lenh:
+    export PYTHONPATH=$(pwd)/data_ingestion
+    ./.venv/bin/python -m src.price_ws_client
+
+8. Chay Spark streaming pipeline
+- File duoc chay: `stream_processing/src/spark_pipeline.py`
+- Muc dich:
+  + Doc 2 stream tu Kafka.
+  + Phan tich sentiment tin tuc bang FinBERT.
+  + Join theo window.
+  + Sinh alert.
+  + Ghi output vao Redis va ClickHouse.
+
+Lenh:
+    export PYTHONPATH=$(pwd)/stream_processing
+    ./.venv/bin/python -m src.spark_pipeline
+
+9. Thu tu chay de van hanh day du
+- Buoc 1: khoi dong Docker infrastructure.
+- Buoc 2: chay `news_api_client`.
+- Buoc 3: chay `price_ws_client`.
+- Buoc 4: chay `spark_pipeline`.
+- Buoc 5: mo Redis va ClickHouse de kiem tra output.
+
+Neu ban dung `run.py`, cac buoc tren da duoc gom vao 1 lenh duy nhat.
+
+10. Lenh kiem tra du lieu Kafka
+- Muc dich: xem du lieu raw co vao Kafka hay chua.
+
+Xem topic gia:
+    docker exec crypto-realtime-alert-kafka kafka-console-consumer --bootstrap-server localhost:9092 --topic raw_prices --from-beginning --max-messages 5
+
+Xem topic tin tuc:
+    docker exec crypto-realtime-alert-kafka kafka-console-consumer --bootstrap-server localhost:9092 --topic raw_news --from-beginning --max-messages 5
+
+11. Lenh kiem tra Redis
+- Muc dich: xem trang thai alert hien tai.
+
+Xem so key:
+    docker exec crypto-realtime-alert-redis redis-cli DBSIZE
+
+Xem danh sach key alert:
+    docker exec crypto-realtime-alert-redis redis-cli KEYS 'crypto:alerts*'
+
+Doc gia tri alert:
+    docker exec crypto-realtime-alert-redis redis-cli --raw MGET $(docker exec crypto-realtime-alert-redis redis-cli --raw KEYS 'crypto:alerts*')
+
+12. Lenh kiem tra ClickHouse
+- Muc dich: xem lich su alert da duoc luu hay chua.
+
+Dem so dong:
+    docker exec crypto-realtime-alert-clickhouse clickhouse-client --query "SELECT count() FROM crypto_alert.market_alerts"
+
+Xem 10 dong moi nhat:
+    docker exec crypto-realtime-alert-clickhouse clickhouse-client --query "SELECT symbol, alert_status, news_count, round(price_change_pct, 4), headline, timestamp FROM crypto_alert.market_alerts ORDER BY timestamp DESC LIMIT 10"
+
+13. Dung ha tang Docker
+- Muc dich: tat toan bo container infrastructure.
+
+Lenh:
+    docker compose --env-file .env -f infrastructure/docker-compose.yml down
+
+14. Ghi chu van hanh
+- `news_api_client` co the gap loi `429 Too Many Requests` tu CryptoPanic neu goi qua nhanh.
+- FinBERT co the tai model o lan chay dau tien, cac lan sau se nhanh hon neu cache da co san.
+- Spark pipeline can duoc chay bang `.venv` de worker Python dung dung dependency cua project.

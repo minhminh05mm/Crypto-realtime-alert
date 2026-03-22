@@ -1,0 +1,139 @@
+HUONG DAN THEM TINH NANG TELEGRAM ALERT
+========================================
+
+1. Muc tieu
+- Bo sung kha nang gui canh bao bien dong gia den user qua Telegram Bot.
+- Khong can code ngay trong giai doan nay.
+- Muc tieu cua file nay la dinh huong thiet ke va cac buoc trien khai sau nay.
+
+2. Gia tri cua tinh nang
+- User nhan canh bao ngay lap tuc tren dien thoai.
+- Co the gui theo nguong bien dong va sentiment.
+- Co the mo rong thanh he thong subscription theo tung symbol.
+
+3. Vi tri phu hop de dat tinh nang
+
+Phuong an khuyen nghi:
+- Tao mot module rieng vi du:
+  + `alert_dispatcher/`
+  + hoac `notification_service/`
+
+Ly do:
+- Tach biet phan xu ly stream va phan gui thong bao.
+- De scale doc lap.
+- Tranh lam `spark_pipeline.py` qua nhieu trach nhiem.
+
+4. Kien truc de xuat
+
+Phuong an tot nhat:
+- `spark_pipeline.py` tiep tuc ghi alert vao Redis va ClickHouse.
+- Mot service moi doc alert tu Redis hoac Kafka topic canh bao.
+- Service nay gui thong diep qua Telegram Bot API.
+
+Luong de xuat:
+- Spark -> Kafka topic moi `alerts`
+- `telegram_notifier` doc topic `alerts`
+- `telegram_notifier` gui den Telegram user
+
+Tai sao nen them topic `alerts`:
+- Giam coupling giua Spark va Telegram.
+- De retry / DLQ de hon.
+- Co the them nhieu kenh notification khac sau nay:
+  + Telegram
+  + Email
+  + Discord
+  + Webhook
+
+5. Bien moi truong can bo sung sau nay
+- `TELEGRAM_BOT_TOKEN`
+- `TELEGRAM_CHAT_ID`
+- `TELEGRAM_ENABLED`
+- `TELEGRAM_ALERT_MIN_PRICE_CHANGE_PCT`
+- `TELEGRAM_MESSAGE_TEMPLATE`
+- `ALERTS_TOPIC`
+
+6. Noi dung thong diep de xuat
+
+Can co:
+- Symbol
+- Gia hien tai
+- % bien dong
+- Sentiment label
+- Sentiment score
+- Tieu de tin tuc
+- Thoi diem canh bao
+- Muc do alert
+
+Vi du:
+- `BTCUSDT`
+- `Price Change: 3.42%`
+- `Sentiment: Negative`
+- `Headline: SEC delays ETF review`
+- `Status: WARNING_HIGH_VOLATILITY`
+
+7. Logic gui de xuat
+- Chi gui khi `alert_status = WARNING_HIGH_VOLATILITY`
+- Co co che chong spam:
+  + cooldown theo symbol
+  + chi gui lai neu muc bien dong thay doi du lon
+  + hoac chi gui 1 lan trong 5-10 phut
+
+8. Dinh huong thiet ke module Telegram
+
+Neu tao service moi, co the co cau truc:
+- `notification_service/`
+  + `src/config.py`
+  + `src/telegram_client.py`
+  + `src/alert_consumer.py`
+  + `requirements.txt`
+
+Vai tro tung file:
+- `config.py`
+  + load env
+- `telegram_client.py`
+  + goi Telegram Bot API
+- `alert_consumer.py`
+  + doc alert tu Kafka / Redis
+  + format message
+  + goi `telegram_client.py`
+
+9. Nguon du lieu de notifier
+
+Lua chon 1: Doc tu Redis
+- Uu diem:
+  + de lam nhanh
+- Nhuoc diem:
+  + Redis la current state, khong tot bang event stream
+
+Lua chon 2: Doc tu Kafka topic `alerts`
+- Uu diem:
+  + dung event-driven
+  + de retry
+  + de scale
+  + de theo doi lich su
+- Nhuoc diem:
+  + can them 1 topic va 1 consumer moi
+
+Khuyen nghi:
+- Dung Kafka topic `alerts`
+
+10. Rui ro can luu y
+- Spam message neu gia bien dong lien tuc
+- Telegram API rate limit
+- User muon subscribe theo tung symbol khac nhau
+- Can luu log notification de truy vet
+- Can co dead-letter hoac retry queue neu Telegram loi
+
+11. Trinh tu trien khai de xuat
+- Buoc 1: them topic `alerts`
+- Buoc 2: cap nhat `spark_pipeline.py` de phat event alert ra topic nay
+- Buoc 3: tao service `telegram_notifier`
+- Buoc 4: tao template message
+- Buoc 5: them cooldown / de-duplication
+- Buoc 6: them logging va metrics
+- Buoc 7: test E2E
+
+12. Ket luan
+- Telegram alert la huong mo rong rat phu hop cho du an nay.
+- Nen trien khai theo kieu tach service rieng, doc event tu Kafka topic `alerts`.
+- Cach lam nay sach kien truc, de scale, de maintain va phu hop he thong enterprise hon viec goi Telegram truc tiep ben trong Spark job.

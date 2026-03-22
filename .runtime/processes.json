@@ -1,0 +1,29 @@
+{
+  "news_api_client": {
+    "name": "news_api_client",
+    "module": "src.news_api_client",
+    "pid": 170185,
+    "pgid": 170185,
+    "workdir": "/home/minhminh05mm/crypto-realtime-alert/data_ingestion",
+    "log_path": "/home/minhminh05mm/crypto-realtime-alert/.runtime/logs/news_api_client.log",
+    "started_at": "2026-03-21T16:29:57.123970+00:00"
+  },
+  "price_ws_client": {
+    "name": "price_ws_client",
+    "module": "src.price_ws_client",
+    "pid": 170363,
+    "pgid": 170363,
+    "workdir": "/home/minhminh05mm/crypto-realtime-alert/data_ingestion",
+    "log_path": "/home/minhminh05mm/crypto-realtime-alert/.runtime/logs/price_ws_client.log",
+    "started_at": "2026-03-21T16:30:00.125274+00:00"
+  },
+  "spark_pipeline": {
+    "name": "spark_pipeline",
+    "module": "src.spark_pipeline",
+    "pid": 170443,
+    "pgid": 170443,
+    "workdir": "/home/minhminh05mm/crypto-realtime-alert/stream_processing",
+    "log_path": "/home/minhminh05mm/crypto-realtime-alert/.runtime/logs/spark_pipeline.log",
+    "started_at": "2026-03-21T16:30:03.132506+00:00"
+  }
+}
