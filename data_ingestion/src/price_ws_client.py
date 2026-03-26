@@ -30,6 +30,7 @@ class BinancePriceWsClient:
         self.stop_event = Event()
         self.ws_app: websocket.WebSocketApp | None = None
         self.published_events = 0
+        self.tracked_symbols = self.settings.tracked_symbols
 
     def run(self) -> None:
         while not self.stop_event.is_set():
@@ -87,7 +88,7 @@ class BinancePriceWsClient:
             LOGGER.exception("Failed to decode Binance WebSocket message.")
             return
 
-        events = payload if isinstance(payload, list) else [payload]
+        events = self._extract_events(payload)
         published_now = 0
 
         for event in events:
@@ -97,6 +98,11 @@ class BinancePriceWsClient:
 
             normalized_event = self._normalize_event(event)
             if normalized_event is None:
+                continue
+            if (
+                self.tracked_symbols
+                and normalized_event["symbol"] not in self.tracked_symbols
+            ):
                 continue
 
             self.producer.send(
@@ -134,6 +140,21 @@ class BinancePriceWsClient:
             close_status_code,
             close_message,
         )
+
+    @staticmethod
+    def _extract_events(payload: Any) -> list[dict[str, Any]]:
+        if isinstance(payload, list):
+            return [item for item in payload if isinstance(item, dict)]
+
+        if isinstance(payload, dict):
+            nested_payload = payload.get("data")
+            if isinstance(nested_payload, list):
+                return [item for item in nested_payload if isinstance(item, dict)]
+            if isinstance(nested_payload, dict):
+                return [nested_payload]
+            return [payload]
+
+        return []
 
     @staticmethod
     def _normalize_event(event: dict[str, Any]) -> dict[str, Any] | None:

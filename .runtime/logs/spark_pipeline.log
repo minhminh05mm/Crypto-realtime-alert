@@ -236,3 +236,1009 @@ Caused by: org.apache.kafka.common.errors.TimeoutException: Timed out waiting fo
 26/03/21 16:45:09 WARN NetworkClient: [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
 26/03/21 16:45:11 WARN NetworkClient: [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
 26/03/21 16:45:12 WARN NetworkClient: [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+
+[2026-03-23T08:22:32.868729+00:00] starting spark_pipeline with module src.spark_pipeline
+:: loading settings :: url = jar:file:/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/pyspark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /tmp/crypto-realtime-alert/.ivy2/cache
+The jars for the packages stored in: /tmp/crypto-realtime-alert/.ivy2/jars
+org.apache.spark#spark-sql-kafka-0-10_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-427c24fc-af06-4ea9-87aa-ddebea4c5275;1.0
+	confs: [default]
+	found org.apache.spark#spark-sql-kafka-0-10_2.12;3.5.1 in central
+	found org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.5.1 in central
+	found org.apache.kafka#kafka-clients;3.4.1 in central
+	found org.lz4#lz4-java;1.8.0 in central
+	found org.xerial.snappy#snappy-java;1.1.10.3 in central
+	found org.slf4j#slf4j-api;2.0.7 in central
+	found org.apache.hadoop#hadoop-client-runtime;3.3.4 in central
+	found org.apache.hadoop#hadoop-client-api;3.3.4 in central
+	found commons-logging#commons-logging;1.1.3 in central
+	found com.google.code.findbugs#jsr305;3.0.0 in central
+	found org.apache.commons#commons-pool2;2.11.1 in central
+downloading https://repo1.maven.org/maven2/org/apache/spark/spark-sql-kafka-0-10_2.12/3.5.1/spark-sql-kafka-0-10_2.12-3.5.1.jar ...
+	[SUCCESSFUL ] org.apache.spark#spark-sql-kafka-0-10_2.12;3.5.1!spark-sql-kafka-0-10_2.12.jar (186ms)
+downloading https://repo1.maven.org/maven2/org/apache/spark/spark-token-provider-kafka-0-10_2.12/3.5.1/spark-token-provider-kafka-0-10_2.12-3.5.1.jar ...
+	[SUCCESSFUL ] org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.5.1!spark-token-provider-kafka-0-10_2.12.jar (141ms)
+downloading https://repo1.maven.org/maven2/org/apache/kafka/kafka-clients/3.4.1/kafka-clients-3.4.1.jar ...
+	[SUCCESSFUL ] org.apache.kafka#kafka-clients;3.4.1!kafka-clients.jar (1180ms)
+downloading https://repo1.maven.org/maven2/com/google/code/findbugs/jsr305/3.0.0/jsr305-3.0.0.jar ...
+	[SUCCESSFUL ] com.google.code.findbugs#jsr305;3.0.0!jsr305.jar (179ms)
+downloading https://repo1.maven.org/maven2/org/apache/commons/commons-pool2/2.11.1/commons-pool2-2.11.1.jar ...
+	[SUCCESSFUL ] org.apache.commons#commons-pool2;2.11.1!commons-pool2.jar (170ms)
+downloading https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-client-runtime/3.3.4/hadoop-client-runtime-3.3.4.jar ...
+	[SUCCESSFUL ] org.apache.hadoop#hadoop-client-runtime;3.3.4!hadoop-client-runtime.jar (7814ms)
+downloading https://repo1.maven.org/maven2/org/lz4/lz4-java/1.8.0/lz4-java-1.8.0.jar ...
+	[SUCCESSFUL ] org.lz4#lz4-java;1.8.0!lz4-java.jar (224ms)
+downloading https://repo1.maven.org/maven2/org/xerial/snappy/snappy-java/1.1.10.3/snappy-java-1.1.10.3.jar ...
+	[SUCCESSFUL ] org.xerial.snappy#snappy-java;1.1.10.3!snappy-java.jar(bundle) (541ms)
+downloading https://repo1.maven.org/maven2/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar ...
+	[SUCCESSFUL ] org.slf4j#slf4j-api;2.0.7!slf4j-api.jar (152ms)
+downloading https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-client-api/3.3.4/hadoop-client-api-3.3.4.jar ...
+	[SUCCESSFUL ] org.apache.hadoop#hadoop-client-api;3.3.4!hadoop-client-api.jar (4463ms)
+downloading https://repo1.maven.org/maven2/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar ...
+	[SUCCESSFUL ] commons-logging#commons-logging;1.1.3!commons-logging.jar (183ms)
+:: resolution report :: resolve 10914ms :: artifacts dl 15252ms
+	:: modules in use:
+	com.google.code.findbugs#jsr305;3.0.0 from central in [default]
+	commons-logging#commons-logging;1.1.3 from central in [default]
+	org.apache.commons#commons-pool2;2.11.1 from central in [default]
+	org.apache.hadoop#hadoop-client-api;3.3.4 from central in [default]
+	org.apache.hadoop#hadoop-client-runtime;3.3.4 from central in [default]
+	org.apache.kafka#kafka-clients;3.4.1 from central in [default]
+	org.apache.spark#spark-sql-kafka-0-10_2.12;3.5.1 from central in [default]
+	org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.5.1 from central in [default]
+	org.lz4#lz4-java;1.8.0 from central in [default]
+	org.slf4j#slf4j-api;2.0.7 from central in [default]
+	org.xerial.snappy#snappy-java;1.1.10.3 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   11  |   11  |   11  |   0   ||   11  |   11  |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-427c24fc-af06-4ea9-87aa-ddebea4c5275
+	confs: [default]
+	11 artifacts copied, 0 already retrieved (56767kB/106ms)
+26/03/23 08:23:17 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+2026-03-23 08:23:25,717 | INFO | __main__ | Spark streaming query started successfully.
+[Stage 0:>                  (0 + 2) / 2][Stage 3:>                  (0 + 4) / 4][Stage 0:>                                                          (0 + 2) / 2][Stage 4:>                                                          (0 + 1) / 1]                                                                                [Stage 9:>                                                          (0 + 3) / 3]                                                                                2026-03-23 08:23:36,588 | INFO | __main__ | Skipping empty micro-batch batch_id=0
+[Stage 12:======================================>                   (2 + 1) / 3]                                                                                [Stage 19:>                                                         (0 + 3) / 3]                                                                                2026-03-23 08:23:40,685 | INFO | __main__ | Skipping empty micro-batch batch_id=1
+[Stage 29:>                                                         (0 + 3) / 3]                                                                                2026-03-23 08:24:02,690 | INFO | __main__ | Skipping empty micro-batch batch_id=2
+2026-03-23 08:24:32,058 | INFO | __main__ | Skipping empty micro-batch batch_id=3
+2026-03-23 08:25:02,517 | INFO | __main__ | Skipping empty micro-batch batch_id=4
+2026-03-23 08:25:32,554 | INFO | __main__ | Skipping empty micro-batch batch_id=5
+2026-03-23 08:26:02,421 | INFO | __main__ | Skipping empty micro-batch batch_id=6
+2026-03-23 08:26:32,542 | INFO | __main__ | Skipping empty micro-batch batch_id=7
+2026-03-23 08:27:02,245 | INFO | __main__ | Skipping empty micro-batch batch_id=8
+[Stage 99:>                                                         (0 + 3) / 3]                                                                                2026-03-23 08:27:32,805 | INFO | __main__ | Skipping empty micro-batch batch_id=9
+[Stage 109:>                                                        (0 + 3) / 3][Stage 109:===================>                                     (1 + 2) / 3]                                                                                2026-03-23 08:28:04,283 | INFO | __main__ | Skipping empty micro-batch batch_id=10
+[Stage 119:>                                                        (0 + 3) / 3]                                                                                2026-03-23 08:28:33,472 | INFO | __main__ | Skipping empty micro-batch batch_id=11
+[Stage 129:>                                                        (0 + 3) / 3]                                                                                2026-03-23 08:29:03,325 | INFO | __main__ | Skipping empty micro-batch batch_id=12
+2026-03-23 08:29:32,821 | INFO | __main__ | Skipping empty micro-batch batch_id=13
+2026-03-23 08:30:02,563 | INFO | __main__ | Skipping empty micro-batch batch_id=14
+2026-03-23 08:30:32,018 | INFO | __main__ | Skipping empty micro-batch batch_id=15
+[Stage 169:======================================>                  (2 + 1) / 3]                                                                                2026-03-23 08:31:02,385 | INFO | __main__ | Skipping empty micro-batch batch_id=16
+[Stage 179:>                                                        (0 + 3) / 3]                                                                                2026-03-23 08:31:32,327 | INFO | __main__ | Skipping empty micro-batch batch_id=17
+[Stage 182:>                                                        (0 + 3) / 3]                                                                                2026-03-23 08:32:02,319 | INFO | __main__ | Skipping empty micro-batch batch_id=18
+2026-03-23 08:32:32,021 | INFO | __main__ | Skipping empty micro-batch batch_id=19
+[Stage 202:>                                                        (0 + 3) / 3]                                                                                2026-03-23 08:33:02,287 | INFO | __main__ | Skipping empty micro-batch batch_id=20
+2026-03-23 08:33:31,996 | INFO | __main__ | Skipping empty micro-batch batch_id=21
+[Stage 222:======================================>                  (2 + 1) / 3]                                                                                2026-03-23 08:34:02,741 | INFO | __main__ | Skipping empty micro-batch batch_id=22
+2026-03-23 08:34:32,846 | INFO | __main__ | Skipping empty micro-batch batch_id=23
+2026-03-23 08:35:03,048 | INFO | __main__ | Skipping empty micro-batch batch_id=24
+2026-03-23 08:35:33,128 | INFO | __main__ | Skipping empty micro-batch batch_id=25
+[Stage 260:======================================>                  (2 + 1) / 3]                                                                                [Stage 269:======================================>                  (2 + 1) / 3]                                                                                2026-03-23 08:36:03,144 | INFO | __main__ | Skipping empty micro-batch batch_id=26
+[Stage 279:>                                                        (0 + 3) / 3]                                                                                2026-03-23 08:36:32,883 | INFO | __main__ | Skipping empty micro-batch batch_id=27
+2026-03-23 08:37:02,057 | INFO | __main__ | Skipping empty micro-batch batch_id=28
+2026-03-23 08:37:31,694 | INFO | __main__ | Skipping empty micro-batch batch_id=29
+2026-03-23 08:38:02,085 | INFO | __main__ | Skipping empty micro-batch batch_id=30
+2026-03-23 08:38:32,325 | INFO | __main__ | Skipping empty micro-batch batch_id=31
+2026-03-23 08:39:02,047 | INFO | __main__ | Skipping empty micro-batch batch_id=32
+2026-03-23 08:39:31,918 | INFO | __main__ | Skipping empty micro-batch batch_id=33
+[Stage 344:>                                                        (0 + 1) / 1]                                                                                [Stage 349:>                                                        (0 + 3) / 3]                                                                                2026-03-23 08:40:02,714 | INFO | __main__ | Skipping empty micro-batch batch_id=34
+2026-03-23 08:40:31,801 | INFO | __main__ | Skipping empty micro-batch batch_id=35
+2026-03-23 08:41:01,879 | INFO | __main__ | Skipping empty micro-batch batch_id=36
+2026-03-23 08:41:32,111 | INFO | __main__ | Skipping empty micro-batch batch_id=37
+[Stage 380:======================================>                  (2 + 1) / 3]                                                                                [Stage 389:>                                                        (0 + 3) / 3]                                                                                2026-03-23 08:42:02,493 | INFO | __main__ | Skipping empty micro-batch batch_id=38
+2026-03-23 08:42:31,974 | INFO | __main__ | Skipping empty micro-batch batch_id=39
+2026-03-23 08:43:01,933 | INFO | __main__ | Skipping empty micro-batch batch_id=40
+2026-03-23 08:43:31,912 | INFO | __main__ | Skipping empty micro-batch batch_id=41
+2026-03-23 08:44:02,184 | INFO | __main__ | Skipping empty micro-batch batch_id=42
+2026-03-23 08:44:32,325 | INFO | __main__ | Skipping empty micro-batch batch_id=43
+26/03/23 08:44:41 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:44:41 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:44:42 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:44:42 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:44:43 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:44:44 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:44:44 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:44:45 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:44:45 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:44:46 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:44:47 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:44:47 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:44:48 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:44:48 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:44:49 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:44:49 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:44:50 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:44:50 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:44:51 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:44:51 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:44:52 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:44:52 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:44:53 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:44:53 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:44:54 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:44:54 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:44:55 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:44:55 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:44:56 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:44:56 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:44:57 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:44:58 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:44:58 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:44:59 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:44:59 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:45:00 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:45:00 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:45:01 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:45:01 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:45:02 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:45:02 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:45:03 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:45:03 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:45:04 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:45:04 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:45:05 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:45:05 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:45:06 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:45:06 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:45:07 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:45:07 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:45:08 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:45:08 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:45:09 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:45:11 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:45:11 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:45:12 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:45:14 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:45:15 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:45:15 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:45:17 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:46:26 WARN KafkaOffsetReaderAdmin: Error in attempt 1 getting Kafka offsets: 
+java.util.concurrent.ExecutionException: org.apache.kafka.common.errors.TimeoutException: Timed out waiting for a node assignment. Call: describeTopics
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2073)
+	at org.apache.kafka.common.internals.KafkaFutureImpl.get(KafkaFutureImpl.java:165)
+	at org.apache.spark.sql.kafka010.ConsumerStrategy.retrieveAllPartitions(ConsumerStrategy.scala:66)
+	at org.apache.spark.sql.kafka010.ConsumerStrategy.retrieveAllPartitions$(ConsumerStrategy.scala:65)
+	at org.apache.spark.sql.kafka010.SubscribeStrategy.retrieveAllPartitions(ConsumerStrategy.scala:102)
+	at org.apache.spark.sql.kafka010.SubscribeStrategy.assignedTopicPartitions(ConsumerStrategy.scala:113)
+	at org.apache.spark.sql.kafka010.KafkaOffsetReaderAdmin.$anonfun$partitionsAssignedToAdmin$1(KafkaOffsetReaderAdmin.scala:499)
+	at org.apache.spark.sql.kafka010.KafkaOffsetReaderAdmin.withRetries(KafkaOffsetReaderAdmin.scala:518)
+	at org.apache.spark.sql.kafka010.KafkaOffsetReaderAdmin.partitionsAssignedToAdmin(KafkaOffsetReaderAdmin.scala:498)
+	at org.apache.spark.sql.kafka010.KafkaOffsetReaderAdmin.fetchLatestOffsets(KafkaOffsetReaderAdmin.scala:297)
+	at org.apache.spark.sql.kafka010.KafkaMicroBatchStream.latestOffset(KafkaMicroBatchStream.scala:130)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$constructNextBatch$4(MicroBatchExecution.scala:491)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:427)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:425)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$constructNextBatch$2(MicroBatchExecution.scala:490)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:286)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at scala.collection.IterableLike.foreach(IterableLike.scala:74)
+	at scala.collection.IterableLike.foreach$(IterableLike.scala:73)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:56)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:286)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:279)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:108)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$constructNextBatch$1(MicroBatchExecution.scala:479)
+	at scala.runtime.java8.JFunction0$mcZ$sp.apply(JFunction0$mcZ$sp.java:23)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.withProgressLocked(MicroBatchExecution.scala:810)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.constructNextBatch(MicroBatchExecution.scala:475)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$2(MicroBatchExecution.scala:268)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:427)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:425)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$1(MicroBatchExecution.scala:249)
+	at org.apache.spark.sql.execution.streaming.ProcessingTimeExecutor.execute(TriggerExecutor.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runActivatedStream(MicroBatchExecution.scala:239)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.$anonfun$runStream$1(StreamExecution.scala:311)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.org$apache$spark$sql$execution$streaming$StreamExecution$$runStream(StreamExecution.scala:289)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.$anonfun$run$1(StreamExecution.scala:211)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.JobArtifactSet$.withActiveJobArtifactState(JobArtifactSet.scala:94)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.run(StreamExecution.scala:211)
+Caused by: org.apache.kafka.common.errors.TimeoutException: Timed out waiting for a node assignment. Call: describeTopics
+26/03/23 08:46:27 WARN NetworkClient: [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:46:27 WARN NetworkClient: [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:46:27 WARN NetworkClient: [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:46:28 WARN NetworkClient: [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:46:28 WARN NetworkClient: [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 08:46:29 WARN NetworkClient: [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:18:53 WARN NetworkClient: [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:18:53 WARN KafkaOffsetReaderAdmin: Error in attempt 2 getting Kafka offsets: 
+java.util.concurrent.ExecutionException: org.apache.kafka.common.errors.TimeoutException: Timed out waiting for a node assignment. Call: describeTopics
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2073)
+	at org.apache.kafka.common.internals.KafkaFutureImpl.get(KafkaFutureImpl.java:165)
+	at org.apache.spark.sql.kafka010.ConsumerStrategy.retrieveAllPartitions(ConsumerStrategy.scala:66)
+	at org.apache.spark.sql.kafka010.ConsumerStrategy.retrieveAllPartitions$(ConsumerStrategy.scala:65)
+	at org.apache.spark.sql.kafka010.SubscribeStrategy.retrieveAllPartitions(ConsumerStrategy.scala:102)
+	at org.apache.spark.sql.kafka010.SubscribeStrategy.assignedTopicPartitions(ConsumerStrategy.scala:113)
+	at org.apache.spark.sql.kafka010.KafkaOffsetReaderAdmin.$anonfun$partitionsAssignedToAdmin$1(KafkaOffsetReaderAdmin.scala:499)
+	at org.apache.spark.sql.kafka010.KafkaOffsetReaderAdmin.withRetries(KafkaOffsetReaderAdmin.scala:518)
+	at org.apache.spark.sql.kafka010.KafkaOffsetReaderAdmin.partitionsAssignedToAdmin(KafkaOffsetReaderAdmin.scala:498)
+	at org.apache.spark.sql.kafka010.KafkaOffsetReaderAdmin.fetchLatestOffsets(KafkaOffsetReaderAdmin.scala:297)
+	at org.apache.spark.sql.kafka010.KafkaMicroBatchStream.latestOffset(KafkaMicroBatchStream.scala:130)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$constructNextBatch$4(MicroBatchExecution.scala:491)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:427)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:425)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$constructNextBatch$2(MicroBatchExecution.scala:490)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:286)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at scala.collection.IterableLike.foreach(IterableLike.scala:74)
+	at scala.collection.IterableLike.foreach$(IterableLike.scala:73)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:56)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:286)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:279)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:108)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$constructNextBatch$1(MicroBatchExecution.scala:479)
+	at scala.runtime.java8.JFunction0$mcZ$sp.apply(JFunction0$mcZ$sp.java:23)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.withProgressLocked(MicroBatchExecution.scala:810)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.constructNextBatch(MicroBatchExecution.scala:475)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$2(MicroBatchExecution.scala:268)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:427)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:425)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$1(MicroBatchExecution.scala:249)
+	at org.apache.spark.sql.execution.streaming.ProcessingTimeExecutor.execute(TriggerExecutor.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runActivatedStream(MicroBatchExecution.scala:239)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.$anonfun$runStream$1(StreamExecution.scala:311)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.org$apache$spark$sql$execution$streaming$StreamExecution$$runStream(StreamExecution.scala:289)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.$anonfun$run$1(StreamExecution.scala:211)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.JobArtifactSet$.withActiveJobArtifactState(JobArtifactSet.scala:94)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.run(StreamExecution.scala:211)
+Caused by: org.apache.kafka.common.errors.TimeoutException: Timed out waiting for a node assignment. Call: describeTopics
+26/03/23 09:18:54 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:18:54 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:18:54 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:18:54 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:18:55 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:18:56 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:18:57 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:18:58 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:18:59 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:00 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:01 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:02 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:03 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:04 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:05 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:06 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:07 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:09 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:10 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:11 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:12 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:13 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:14 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:15 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:16 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:17 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:18 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:19 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:20 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:21 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:22 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:23 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:24 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:25 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:27 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:28 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:29 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:30 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:31 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:32 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:33 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:34 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:35 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:36 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:37 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:38 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:39 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:40 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:41 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:42 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:43 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:45 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:46 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:47 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:48 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:49 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:50 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:51 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:52 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:53 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:54 WARN KafkaOffsetReaderAdmin: Error in attempt 3 getting Kafka offsets: 
+java.util.concurrent.ExecutionException: org.apache.kafka.common.errors.TimeoutException: Timed out waiting for a node assignment. Call: describeTopics
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2073)
+	at org.apache.kafka.common.internals.KafkaFutureImpl.get(KafkaFutureImpl.java:165)
+	at org.apache.spark.sql.kafka010.ConsumerStrategy.retrieveAllPartitions(ConsumerStrategy.scala:66)
+	at org.apache.spark.sql.kafka010.ConsumerStrategy.retrieveAllPartitions$(ConsumerStrategy.scala:65)
+	at org.apache.spark.sql.kafka010.SubscribeStrategy.retrieveAllPartitions(ConsumerStrategy.scala:102)
+	at org.apache.spark.sql.kafka010.SubscribeStrategy.assignedTopicPartitions(ConsumerStrategy.scala:113)
+	at org.apache.spark.sql.kafka010.KafkaOffsetReaderAdmin.$anonfun$partitionsAssignedToAdmin$1(KafkaOffsetReaderAdmin.scala:499)
+	at org.apache.spark.sql.kafka010.KafkaOffsetReaderAdmin.withRetries(KafkaOffsetReaderAdmin.scala:518)
+	at org.apache.spark.sql.kafka010.KafkaOffsetReaderAdmin.partitionsAssignedToAdmin(KafkaOffsetReaderAdmin.scala:498)
+	at org.apache.spark.sql.kafka010.KafkaOffsetReaderAdmin.fetchLatestOffsets(KafkaOffsetReaderAdmin.scala:297)
+	at org.apache.spark.sql.kafka010.KafkaMicroBatchStream.latestOffset(KafkaMicroBatchStream.scala:130)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$constructNextBatch$4(MicroBatchExecution.scala:491)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:427)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:425)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$constructNextBatch$2(MicroBatchExecution.scala:490)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:286)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at scala.collection.IterableLike.foreach(IterableLike.scala:74)
+	at scala.collection.IterableLike.foreach$(IterableLike.scala:73)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:56)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:286)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:279)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:108)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$constructNextBatch$1(MicroBatchExecution.scala:479)
+	at scala.runtime.java8.JFunction0$mcZ$sp.apply(JFunction0$mcZ$sp.java:23)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.withProgressLocked(MicroBatchExecution.scala:810)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.constructNextBatch(MicroBatchExecution.scala:475)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$2(MicroBatchExecution.scala:268)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:427)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:425)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$1(MicroBatchExecution.scala:249)
+	at org.apache.spark.sql.execution.streaming.ProcessingTimeExecutor.execute(TriggerExecutor.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runActivatedStream(MicroBatchExecution.scala:239)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.$anonfun$runStream$1(StreamExecution.scala:311)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.org$apache$spark$sql$execution$streaming$StreamExecution$$runStream(StreamExecution.scala:289)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.$anonfun$run$1(StreamExecution.scala:211)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.JobArtifactSet$.withActiveJobArtifactState(JobArtifactSet.scala:94)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.run(StreamExecution.scala:211)
+Caused by: org.apache.kafka.common.errors.TimeoutException: Timed out waiting for a node assignment. Call: describeTopics
+26/03/23 09:19:54 WARN NetworkClient: [AdminClient clientId=adminclient-4] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+26/03/23 09:19:55 ERROR MicroBatchExecution: Query crypto_realtime_alert_pipeline [id = 8d9a53b6-ce26-4b8c-a6cd-07503507af5b, runId = 2a61c0ff-4c5a-4bd9-a366-249ee592f761] terminated with error
+java.util.concurrent.ExecutionException: org.apache.kafka.common.errors.TimeoutException: Timed out waiting for a node assignment. Call: describeTopics
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2073)
+	at org.apache.kafka.common.internals.KafkaFutureImpl.get(KafkaFutureImpl.java:165)
+	at org.apache.spark.sql.kafka010.ConsumerStrategy.retrieveAllPartitions(ConsumerStrategy.scala:66)
+	at org.apache.spark.sql.kafka010.ConsumerStrategy.retrieveAllPartitions$(ConsumerStrategy.scala:65)
+	at org.apache.spark.sql.kafka010.SubscribeStrategy.retrieveAllPartitions(ConsumerStrategy.scala:102)
+	at org.apache.spark.sql.kafka010.SubscribeStrategy.assignedTopicPartitions(ConsumerStrategy.scala:113)
+	at org.apache.spark.sql.kafka010.KafkaOffsetReaderAdmin.$anonfun$partitionsAssignedToAdmin$1(KafkaOffsetReaderAdmin.scala:499)
+	at org.apache.spark.sql.kafka010.KafkaOffsetReaderAdmin.withRetries(KafkaOffsetReaderAdmin.scala:518)
+	at org.apache.spark.sql.kafka010.KafkaOffsetReaderAdmin.partitionsAssignedToAdmin(KafkaOffsetReaderAdmin.scala:498)
+	at org.apache.spark.sql.kafka010.KafkaOffsetReaderAdmin.fetchLatestOffsets(KafkaOffsetReaderAdmin.scala:297)
+	at org.apache.spark.sql.kafka010.KafkaMicroBatchStream.latestOffset(KafkaMicroBatchStream.scala:130)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$constructNextBatch$4(MicroBatchExecution.scala:491)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:427)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:425)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$constructNextBatch$2(MicroBatchExecution.scala:490)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:286)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at scala.collection.IterableLike.foreach(IterableLike.scala:74)
+	at scala.collection.IterableLike.foreach$(IterableLike.scala:73)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:56)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:286)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:279)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:108)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$constructNextBatch$1(MicroBatchExecution.scala:479)
+	at scala.runtime.java8.JFunction0$mcZ$sp.apply(JFunction0$mcZ$sp.java:23)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.withProgressLocked(MicroBatchExecution.scala:810)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.constructNextBatch(MicroBatchExecution.scala:475)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$2(MicroBatchExecution.scala:268)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:427)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:425)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$1(MicroBatchExecution.scala:249)
+	at org.apache.spark.sql.execution.streaming.ProcessingTimeExecutor.execute(TriggerExecutor.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runActivatedStream(MicroBatchExecution.scala:239)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.$anonfun$runStream$1(StreamExecution.scala:311)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.org$apache$spark$sql$execution$streaming$StreamExecution$$runStream(StreamExecution.scala:289)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.$anonfun$run$1(StreamExecution.scala:211)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.JobArtifactSet$.withActiveJobArtifactState(JobArtifactSet.scala:94)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.run(StreamExecution.scala:211)
+Caused by: org.apache.kafka.common.errors.TimeoutException: Timed out waiting for a node assignment. Call: describeTopics
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/minhminh05mm/crypto-realtime-alert/stream_processing/src/spark_pipeline.py", line 493, in <module>
+    run()
+  File "/home/minhminh05mm/crypto-realtime-alert/stream_processing/src/spark_pipeline.py", line 489, in run
+    query.awaitTermination()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/pyspark/sql/streaming/query.py", line 221, in awaitTermination
+    return self._jsq.awaitTermination()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/py4j/java_gateway.py", line 1322, in __call__
+    return_value = get_return_value(
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/pyspark/errors/exceptions/captured.py", line 185, in deco
+    raise converted from None
+pyspark.errors.exceptions.captured.StreamingQueryException: [STREAM_FAILED] Query [id = 8d9a53b6-ce26-4b8c-a6cd-07503507af5b, runId = 2a61c0ff-4c5a-4bd9-a366-249ee592f761] terminated with exception: org.apache.kafka.common.errors.TimeoutException: Timed out waiting for a node assignment. Call: describeTopics
+
+[2026-03-26T12:43:32.271315+00:00] starting spark_pipeline with module src.spark_pipeline
+:: loading settings :: url = jar:file:/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/pyspark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /tmp/crypto-realtime-alert/.ivy2/cache
+The jars for the packages stored in: /tmp/crypto-realtime-alert/.ivy2/jars
+org.apache.spark#spark-sql-kafka-0-10_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-42b28733-ef27-4ffd-872b-f62b81471a0d;1.0
+	confs: [default]
+	found org.apache.spark#spark-sql-kafka-0-10_2.12;3.5.1 in central
+	found org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.5.1 in central
+	found org.apache.kafka#kafka-clients;3.4.1 in central
+	found org.lz4#lz4-java;1.8.0 in central
+	found org.xerial.snappy#snappy-java;1.1.10.3 in central
+	found org.slf4j#slf4j-api;2.0.7 in central
+	found org.apache.hadoop#hadoop-client-runtime;3.3.4 in central
+	found org.apache.hadoop#hadoop-client-api;3.3.4 in central
+	found commons-logging#commons-logging;1.1.3 in central
+	found com.google.code.findbugs#jsr305;3.0.0 in central
+	found org.apache.commons#commons-pool2;2.11.1 in central
+downloading https://repo1.maven.org/maven2/org/apache/spark/spark-sql-kafka-0-10_2.12/3.5.1/spark-sql-kafka-0-10_2.12-3.5.1.jar ...
+	[SUCCESSFUL ] org.apache.spark#spark-sql-kafka-0-10_2.12;3.5.1!spark-sql-kafka-0-10_2.12.jar (147ms)
+downloading https://repo1.maven.org/maven2/org/apache/spark/spark-token-provider-kafka-0-10_2.12/3.5.1/spark-token-provider-kafka-0-10_2.12-3.5.1.jar ...
+	[SUCCESSFUL ] org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.5.1!spark-token-provider-kafka-0-10_2.12.jar (134ms)
+downloading https://repo1.maven.org/maven2/org/apache/kafka/kafka-clients/3.4.1/kafka-clients-3.4.1.jar ...
+	[SUCCESSFUL ] org.apache.kafka#kafka-clients;3.4.1!kafka-clients.jar (304ms)
+downloading https://repo1.maven.org/maven2/com/google/code/findbugs/jsr305/3.0.0/jsr305-3.0.0.jar ...
+	[SUCCESSFUL ] com.google.code.findbugs#jsr305;3.0.0!jsr305.jar (148ms)
+downloading https://repo1.maven.org/maven2/org/apache/commons/commons-pool2/2.11.1/commons-pool2-2.11.1.jar ...
+	[SUCCESSFUL ] org.apache.commons#commons-pool2;2.11.1!commons-pool2.jar (62ms)
+downloading https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-client-runtime/3.3.4/hadoop-client-runtime-3.3.4.jar ...
+	[SUCCESSFUL ] org.apache.hadoop#hadoop-client-runtime;3.3.4!hadoop-client-runtime.jar (768ms)
+downloading https://repo1.maven.org/maven2/org/lz4/lz4-java/1.8.0/lz4-java-1.8.0.jar ...
+	[SUCCESSFUL ] org.lz4#lz4-java;1.8.0!lz4-java.jar (142ms)
+downloading https://repo1.maven.org/maven2/org/xerial/snappy/snappy-java/1.1.10.3/snappy-java-1.1.10.3.jar ...
+	[SUCCESSFUL ] org.xerial.snappy#snappy-java;1.1.10.3!snappy-java.jar(bundle) (186ms)
+downloading https://repo1.maven.org/maven2/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar ...
+	[SUCCESSFUL ] org.slf4j#slf4j-api;2.0.7!slf4j-api.jar (120ms)
+downloading https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-client-api/3.3.4/hadoop-client-api-3.3.4.jar ...
+	[SUCCESSFUL ] org.apache.hadoop#hadoop-client-api;3.3.4!hadoop-client-api.jar (626ms)
+downloading https://repo1.maven.org/maven2/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar ...
+	[SUCCESSFUL ] commons-logging#commons-logging;1.1.3!commons-logging.jar (133ms)
+:: resolution report :: resolve 11197ms :: artifacts dl 2790ms
+	:: modules in use:
+	com.google.code.findbugs#jsr305;3.0.0 from central in [default]
+	commons-logging#commons-logging;1.1.3 from central in [default]
+	org.apache.commons#commons-pool2;2.11.1 from central in [default]
+	org.apache.hadoop#hadoop-client-api;3.3.4 from central in [default]
+	org.apache.hadoop#hadoop-client-runtime;3.3.4 from central in [default]
+	org.apache.kafka#kafka-clients;3.4.1 from central in [default]
+	org.apache.spark#spark-sql-kafka-0-10_2.12;3.5.1 from central in [default]
+	org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.5.1 from central in [default]
+	org.lz4#lz4-java;1.8.0 from central in [default]
+	org.slf4j#slf4j-api;2.0.7 from central in [default]
+	org.xerial.snappy#snappy-java;1.1.10.3 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   11  |   11  |   11  |   0   ||   11  |   11  |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-42b28733-ef27-4ffd-872b-f62b81471a0d
+	confs: [default]
+	11 artifacts copied, 0 already retrieved (56767kB/167ms)
+26/03/26 12:43:59 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/minhminh05mm/crypto-realtime-alert/stream_processing/src/spark_pipeline.py", line 501, in <module>
+    run()
+  File "/home/minhminh05mm/crypto-realtime-alert/stream_processing/src/spark_pipeline.py", line 493, in run
+    .start()
+     ^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/pyspark/sql/streaming/readwriter.py", line 1527, in start
+    return self._sq(self._jwrite.start())
+                    ^^^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/py4j/java_gateway.py", line 1322, in __call__
+    return_value = get_return_value(
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/pyspark/errors/exceptions/captured.py", line 185, in deco
+    raise converted from None
+pyspark.errors.exceptions.captured.AnalysisException: Stream-stream LeftOuter join between two streaming DataFrame/Datasets is not supported without a watermark in the join keys, or a watermark on the nullable side and an appropriate range condition;
+Join LeftOuter, (((symbol#31 = symbol#121) AND (window#40-T30000ms.start = window#149-T30000ms.start)) AND (window#40-T30000ms.end = window#149-T30000ms.end))
+:- SubqueryAlias prices
+:  +- Project [window#40-T30000ms, symbol#31, first_price#63, current_price#64, timestamp_ms#65L, min_price#50, max_price#52, price_tick_count#54L, CASE WHEN (first_price#63 > 0.0) THEN (abs(((current_price#64 - first_price#63) / first_price#63)) * 100.0) ELSE 0.0 END AS price_change_pct#77]
+:     +- Project [window#40-T30000ms, symbol#31, first_observation#46.price AS first_price#63, last_observation#48.price AS current_price#64, last_observation#48.timestamp AS timestamp_ms#65L, min_price#50, max_price#52, price_tick_count#54L]
+:        +- Aggregate [window#55-T30000ms, symbol#31], [window#55-T30000ms AS window#40-T30000ms, symbol#31, min(struct(event_time, event_time#35-T30000ms, timestamp, timestamp#27L, price, price#26)) AS first_observation#46, max(struct(event_time, event_time#35-T30000ms, timestamp, timestamp#27L, price, price#26)) AS last_observation#48, min(price#26) AS min_price#50, max(price#26) AS max_price#52, count(1) AS price_tick_count#54L]
+:           +- Project [named_struct(start, knownnullable(precisetimestampconversion(((precisetimestampconversion(event_time#35-T30000ms, TimestampType, LongType) - CASE WHEN (((precisetimestampconversion(event_time#35-T30000ms, TimestampType, LongType) - 0) % 30000000) < cast(0 as bigint)) THEN (((precisetimestampconversion(event_time#35-T30000ms, TimestampType, LongType) - 0) % 30000000) + 30000000) ELSE ((precisetimestampconversion(event_time#35-T30000ms, TimestampType, LongType) - 0) % 30000000) END) - 0), LongType, TimestampType)), end, knownnullable(precisetimestampconversion((((precisetimestampconversion(event_time#35-T30000ms, TimestampType, LongType) - CASE WHEN (((precisetimestampconversion(event_time#35-T30000ms, TimestampType, LongType) - 0) % 30000000) < cast(0 as bigint)) THEN (((precisetimestampconversion(event_time#35-T30000ms, TimestampType, LongType) - 0) % 30000000) + 30000000) ELSE ((precisetimestampconversion(event_time#35-T30000ms, TimestampType, LongType) - 0) % 30000000) END) - 0) + 30000000), LongType, TimestampType))) AS window#55-T30000ms, symbol#31, price#26, timestamp#27L, event_time#35-T30000ms]
+:              +- Filter isnotnull(event_time#35-T30000ms)
+:                 +- EventTimeWatermark event_time#35: timestamp, 30 seconds
+:                    +- Filter (((isnotnull(symbol#31) AND isnotnull(price#26)) AND isnotnull(timestamp#27L)) AND isnotnull(event_time#35))
+:                       +- Project [symbol#31, price#26, timestamp#27L, to_timestamp(from_unixtime(cast(cast((cast(timestamp#27L as double) / cast(1000 as double)) as double) as bigint), yyyy-MM-dd HH:mm:ss, Some(UTC)), None, TimestampType, Some(UTC), false) AS event_time#35]
+:                          +- Project [upper(trim(symbol#25, None)) AS symbol#31, price#26, timestamp#27L]
+:                             +- Project [payload#23.symbol AS symbol#25, payload#23.price AS price#26, payload#23.timestamp AS timestamp#27L]
+:                                +- Project [from_json(StructField(symbol,StringType,false), StructField(price,DoubleType,false), StructField(timestamp,LongType,false), message#21, Some(UTC)) AS payload#23]
+:                                   +- Project [cast(value#8 as string) AS message#21]
+:                                      +- StreamingRelationV2 org.apache.spark.sql.kafka010.KafkaSourceProvider@63934658, kafka, org.apache.spark.sql.kafka010.KafkaSourceProvider$KafkaTable@375e1657, [startingOffsets=latest, kafka.bootstrap.servers=localhost:19092, subscribe=raw_prices, failOnDataLoss=false], [key#7, value#8, topic#9, partition#10, offset#11L, timestamp#12, timestampType#13], StreamingRelation DataSource(org.apache.spark.sql.SparkSession@27290fe3,kafka,List(),None,List(),None,Map(kafka.bootstrap.servers -> localhost:19092, subscribe -> raw_prices, startingOffsets -> latest, failOnDataLoss -> false),None), kafka, [key#0, value#1, topic#2, partition#3, offset#4L, timestamp#5, timestampType#6]
++- SubqueryAlias news
+   +- Project [window#149-T30000ms, symbol#121, news_count#157L, dominant_news#158.headline AS headline#164, dominant_news#158.sentiment_label AS sentiment_label#165, dominant_news#158.sentiment_score AS sentiment_score#166]
+      +- Aggregate [window#159-T30000ms, symbol#121], [window#159-T30000ms AS window#149-T30000ms, symbol#121, count(1) AS news_count#157L, max(struct(sentiment_strength, abs(sentiment_score#134), published_at_ts, published_at_ts#116-T30000ms AS published_at_ts#144-T30000ms, sentiment_label, sentiment_label#133, sentiment_score, sentiment_score#134, headline, title#112)) AS dominant_news#158]
+         +- Project [named_struct(start, knownnullable(precisetimestampconversion(((precisetimestampconversion(published_at_ts#116-T30000ms, TimestampType, LongType) - CASE WHEN (((precisetimestampconversion(published_at_ts#116-T30000ms, TimestampType, LongType) - 0) % 30000000) < cast(0 as bigint)) THEN (((precisetimestampconversion(published_at_ts#116-T30000ms, TimestampType, LongType) - 0) % 30000000) + 30000000) ELSE ((precisetimestampconversion(published_at_ts#116-T30000ms, TimestampType, LongType) - 0) % 30000000) END) - 0), LongType, TimestampType)), end, knownnullable(precisetimestampconversion((((precisetimestampconversion(published_at_ts#116-T30000ms, TimestampType, LongType) - CASE WHEN (((precisetimestampconversion(published_at_ts#116-T30000ms, TimestampType, LongType) - 0) % 30000000) < cast(0 as bigint)) THEN (((precisetimestampconversion(published_at_ts#116-T30000ms, TimestampType, LongType) - 0) % 30000000) + 30000000) ELSE ((precisetimestampconversion(published_at_ts#116-T30000ms, TimestampType, LongType) - 0) % 30000000) END) - 0) + 30000000), LongType, TimestampType))) AS window#159-T30000ms, symbol#121, title#112, published_at#113, published_at_ts#116-T30000ms, sentiment_label#133, sentiment_score#134]
+            +- Filter isnotnull(published_at_ts#116-T30000ms)
+               +- EventTimeWatermark published_at_ts#116: timestamp, 30 seconds
+                  +- Filter ((isnotnull(symbol#121) AND isnotnull(title#112)) AND isnotnull(published_at_ts#116))
+                     +- Project [symbol#121, title#112, published_at#113, published_at_ts#116, sentiment#127.label AS sentiment_label#133, sentiment#127.sentiment_score AS sentiment_score#134]
+                        +- Project [title#112, published_at#113, published_at_ts#116, symbol#121, sentiment_udf(title#112)#126 AS sentiment#127]
+                           +- Project [title#112, published_at#113, published_at_ts#116, extract_symbol_udf(title#112)#120 AS symbol#121]
+                              +- Project [title#112, published_at#113, to_timestamp(published_at#113, None, TimestampType, Some(UTC), false) AS published_at_ts#116]
+                                 +- Project [payload#110.title AS title#112, payload#110.published_at AS published_at#113]
+                                    +- Project [from_json(StructField(title,StringType,false), StructField(published_at,StringType,false), message#108, Some(UTC)) AS payload#110]
+                                       +- Project [cast(value#95 as string) AS message#108]
+                                          +- StreamingRelationV2 org.apache.spark.sql.kafka010.KafkaSourceProvider@35011c47, kafka, org.apache.spark.sql.kafka010.KafkaSourceProvider$KafkaTable@548287f3, [startingOffsets=latest, kafka.bootstrap.servers=localhost:19092, subscribe=raw_news, failOnDataLoss=false], [key#94, value#95, topic#96, partition#97, offset#98L, timestamp#99, timestampType#100], StreamingRelation DataSource(org.apache.spark.sql.SparkSession@27290fe3,kafka,List(),None,List(),None,Map(kafka.bootstrap.servers -> localhost:19092, subscribe -> raw_news, startingOffsets -> latest, failOnDataLoss -> false),None), kafka, [key#87, value#88, topic#89, partition#90, offset#91L, timestamp#92, timestampType#93]
+
+
+[2026-03-26T12:48:48.364360+00:00] starting spark_pipeline with module src.spark_pipeline
+:: loading settings :: url = jar:file:/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/pyspark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /tmp/crypto-realtime-alert/.ivy2/cache
+The jars for the packages stored in: /tmp/crypto-realtime-alert/.ivy2/jars
+org.apache.spark#spark-sql-kafka-0-10_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-76f27130-b745-4265-b03d-4af06f56a58b;1.0
+	confs: [default]
+	found org.apache.spark#spark-sql-kafka-0-10_2.12;3.5.1 in central
+	found org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.5.1 in central
+	found org.apache.kafka#kafka-clients;3.4.1 in central
+	found org.lz4#lz4-java;1.8.0 in central
+	found org.xerial.snappy#snappy-java;1.1.10.3 in central
+	found org.slf4j#slf4j-api;2.0.7 in central
+	found org.apache.hadoop#hadoop-client-runtime;3.3.4 in central
+	found org.apache.hadoop#hadoop-client-api;3.3.4 in central
+	found commons-logging#commons-logging;1.1.3 in central
+	found com.google.code.findbugs#jsr305;3.0.0 in central
+	found org.apache.commons#commons-pool2;2.11.1 in central
+:: resolution report :: resolve 442ms :: artifacts dl 23ms
+	:: modules in use:
+	com.google.code.findbugs#jsr305;3.0.0 from central in [default]
+	commons-logging#commons-logging;1.1.3 from central in [default]
+	org.apache.commons#commons-pool2;2.11.1 from central in [default]
+	org.apache.hadoop#hadoop-client-api;3.3.4 from central in [default]
+	org.apache.hadoop#hadoop-client-runtime;3.3.4 from central in [default]
+	org.apache.kafka#kafka-clients;3.4.1 from central in [default]
+	org.apache.spark#spark-sql-kafka-0-10_2.12;3.5.1 from central in [default]
+	org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.5.1 from central in [default]
+	org.lz4#lz4-java;1.8.0 from central in [default]
+	org.slf4j#slf4j-api;2.0.7 from central in [default]
+	org.xerial.snappy#snappy-java;1.1.10.3 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   11  |   0   |   0   |   0   ||   11  |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-76f27130-b745-4265-b03d-4af06f56a58b
+	confs: [default]
+	0 artifacts copied, 11 already retrieved (0kB/8ms)
+26/03/26 12:48:54 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+2026-03-26 12:48:59,442 | INFO | __main__ | Spark streaming queries started successfully: crypto_realtime_alert_news_snapshots, crypto_realtime_alert_pipeline
+[Stage 0:>                                                          (0 + 1) / 1][Stage 0:>                  (0 + 1) / 1][Stage 1:>                  (0 + 3) / 3][Stage 0:>                                                          (0 + 1) / 1][Stage 0:>                  (0 + 1) / 1][Stage 2:>                  (0 + 1) / 1]                                                                                [Stage 0:>                                                          (0 + 1) / 1][Stage 0:>                  (0 + 1) / 1][Stage 4:>                  (0 + 4) / 4]                                                                                [Stage 0:>                                                          (0 + 1) / 1]2026-03-26 12:49:15,032 | ERROR | py4j.clientserver | There was an exception while executing the Python Proxy on the Python Side.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/py4j/clientserver.py", line 617, in _call_proxy
+    return_value = getattr(self.pool[obj_id], method)(*params)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/pyspark/sql/utils.py", line 120, in call
+    raise e
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/pyspark/sql/utils.py", line 117, in call
+    self.func(DataFrame(jdf, wrapped_session_jdf), batch_id)
+  File "/home/minhminh05mm/crypto-realtime-alert/stream_processing/src/spark_pipeline.py", line 619, in <lambda>
+    lambda batch_df, batch_id: _process_alert_batch(batch_df, batch_id, settings)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/stream_processing/src/spark_pipeline.py", line 568, in _process_alert_batch
+    enriched_df = _enrich_price_batch_with_news(batch_df, settings)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/stream_processing/src/spark_pipeline.py", line 426, in _enrich_price_batch_with_news
+    enriched.select(
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/pyspark/sql/dataframe.py", line 3227, in select
+    jdf = self._jdf.select(self._jcols(*cols))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/py4j/java_gateway.py", line 1322, in __call__
+    return_value = get_return_value(
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/pyspark/errors/exceptions/captured.py", line 185, in deco
+    raise converted from None
+pyspark.errors.exceptions.captured.AnalysisException: [UNRESOLVED_COLUMN.WITH_SUGGESTION] A column or function parameter with name `news_count` cannot be resolved. Did you mean one of the following? [`symbol`, `max_price`, `min_price`, `window_end`, `first_price`].;
+'Project [timestamp#212, symbol#87, current_price#120, first_price#119, min_price#106, max_price#108, price_change_pct#133, price_tick_count#110L, coalesce('news_count, 0) AS news_count#228, coalesce('sentiment_label, Neutral) AS sentiment_label#229, coalesce('sentiment_score, 0.0) AS sentiment_score#230, coalesce('headline, No correlated news in current processing window.) AS headline#231, window_start#213, window_end#214]
++- Project [to_timestamp(from_unixtime(cast(cast((cast(timestamp_ms#121L as double) / cast(1000 as double)) as double) as bigint), yyyy-MM-dd HH:mm:ss, Some(UTC)), None, TimestampType, Some(UTC), false) AS timestamp#212, symbol#87, current_price#120, first_price#119, min_price#106, max_price#108, price_change_pct#133, price_tick_count#110L, window#96-T30000ms.start AS window_start#213, window#96-T30000ms.end AS window_end#214]
+   +- LogicalRDD [window#96-T30000ms, symbol#87, first_price#119, current_price#120, timestamp_ms#121L, min_price#106, max_price#108, price_tick_count#110L, price_change_pct#133], false
+
+26/03/26 12:49:15 ERROR MicroBatchExecution: Query crypto_realtime_alert_pipeline [id = 49cfb2e2-4b00-4138-b0b2-78ffc4bbd2a3, runId = 7be0ac90-e7c9-49a4-8971-cbf7bdef5d3e] terminated with error
+py4j.Py4JException: An exception was raised by the Python Proxy. Return Message: Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/py4j/clientserver.py", line 617, in _call_proxy
+    return_value = getattr(self.pool[obj_id], method)(*params)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/pyspark/sql/utils.py", line 120, in call
+    raise e
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/pyspark/sql/utils.py", line 117, in call
+    self.func(DataFrame(jdf, wrapped_session_jdf), batch_id)
+  File "/home/minhminh05mm/crypto-realtime-alert/stream_processing/src/spark_pipeline.py", line 619, in <lambda>
+    lambda batch_df, batch_id: _process_alert_batch(batch_df, batch_id, settings)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/stream_processing/src/spark_pipeline.py", line 568, in _process_alert_batch
+    enriched_df = _enrich_price_batch_with_news(batch_df, settings)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/stream_processing/src/spark_pipeline.py", line 426, in _enrich_price_batch_with_news
+    enriched.select(
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/pyspark/sql/dataframe.py", line 3227, in select
+    jdf = self._jdf.select(self._jcols(*cols))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/py4j/java_gateway.py", line 1322, in __call__
+    return_value = get_return_value(
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/pyspark/errors/exceptions/captured.py", line 185, in deco
+    raise converted from None
+pyspark.errors.exceptions.captured.AnalysisException: [UNRESOLVED_COLUMN.WITH_SUGGESTION] A column or function parameter with name `news_count` cannot be resolved. Did you mean one of the following? [`symbol`, `max_price`, `min_price`, `window_end`, `first_price`].;
+'Project [timestamp#212, symbol#87, current_price#120, first_price#119, min_price#106, max_price#108, price_change_pct#133, price_tick_count#110L, coalesce('news_count, 0) AS news_count#228, coalesce('sentiment_label, Neutral) AS sentiment_label#229, coalesce('sentiment_score, 0.0) AS sentiment_score#230, coalesce('headline, No correlated news in current processing window.) AS headline#231, window_start#213, window_end#214]
++- Project [to_timestamp(from_unixtime(cast(cast((cast(timestamp_ms#121L as double) / cast(1000 as double)) as double) as bigint), yyyy-MM-dd HH:mm:ss, Some(UTC)), None, TimestampType, Some(UTC), false) AS timestamp#212, symbol#87, current_price#120, first_price#119, min_price#106, max_price#108, price_change_pct#133, price_tick_count#110L, window#96-T30000ms.start AS window_start#213, window#96-T30000ms.end AS window_end#214]
+   +- LogicalRDD [window#96-T30000ms, symbol#87, first_price#119, current_price#120, timestamp_ms#121L, min_price#106, max_price#108, price_tick_count#110L, price_change_pct#133], false
+
+
+	at py4j.Protocol.getReturnValue(Protocol.java:476)
+	at py4j.reflection.PythonProxyHandler.invoke(PythonProxyHandler.java:108)
+	at jdk.proxy3/jdk.proxy3.$Proxy30.call(Unknown Source)
+	at org.apache.spark.sql.execution.streaming.sources.PythonForeachBatchHelper$.$anonfun$callForeachBatch$1(ForeachBatchSink.scala:53)
+	at org.apache.spark.sql.execution.streaming.sources.PythonForeachBatchHelper$.$anonfun$callForeachBatch$1$adapted(ForeachBatchSink.scala:53)
+	at org.apache.spark.sql.execution.streaming.sources.ForeachBatchSink.addBatch(ForeachBatchSink.scala:34)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$17(MicroBatchExecution.scala:732)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:125)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:201)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:108)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:66)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$16(MicroBatchExecution.scala:729)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:427)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:425)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runBatch(MicroBatchExecution.scala:729)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$2(MicroBatchExecution.scala:286)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:427)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:425)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$1(MicroBatchExecution.scala:249)
+	at org.apache.spark.sql.execution.streaming.ProcessingTimeExecutor.execute(TriggerExecutor.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runActivatedStream(MicroBatchExecution.scala:239)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.$anonfun$runStream$1(StreamExecution.scala:311)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.org$apache$spark$sql$execution$streaming$StreamExecution$$runStream(StreamExecution.scala:289)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.$anonfun$run$1(StreamExecution.scala:211)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.JobArtifactSet$.withActiveJobArtifactState(JobArtifactSet.scala:94)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.run(StreamExecution.scala:211)
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/minhminh05mm/crypto-realtime-alert/stream_processing/src/spark_pipeline.py", line 634, in <module>
+    run()
+  File "/home/minhminh05mm/crypto-realtime-alert/stream_processing/src/spark_pipeline.py", line 630, in run
+    spark.streams.awaitAnyTermination()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/pyspark/sql/streaming/query.py", line 596, in awaitAnyTermination
+    return self._jsqm.awaitAnyTermination()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/py4j/java_gateway.py", line 1322, in __call__
+    return_value = get_return_value(
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/pyspark/errors/exceptions/captured.py", line 185, in deco
+    raise converted from None
+pyspark.errors.exceptions.captured.StreamingQueryException: [STREAM_FAILED] Query [id = 49cfb2e2-4b00-4138-b0b2-78ffc4bbd2a3, runId = 7be0ac90-e7c9-49a4-8971-cbf7bdef5d3e] terminated with exception: An exception was raised by the Python Proxy. Return Message: Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/py4j/clientserver.py", line 617, in _call_proxy
+    return_value = getattr(self.pool[obj_id], method)(*params)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/pyspark/sql/utils.py", line 120, in call
+    raise e
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/pyspark/sql/utils.py", line 117, in call
+    self.func(DataFrame(jdf, wrapped_session_jdf), batch_id)
+  File "/home/minhminh05mm/crypto-realtime-alert/stream_processing/src/spark_pipeline.py", line 619, in <lambda>
+    lambda batch_df, batch_id: _process_alert_batch(batch_df, batch_id, settings)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/stream_processing/src/spark_pipeline.py", line 568, in _process_alert_batch
+    enriched_df = _enrich_price_batch_with_news(batch_df, settings)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/stream_processing/src/spark_pipeline.py", line 426, in _enrich_price_batch_with_news
+    enriched.select(
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/pyspark/sql/dataframe.py", line 3227, in select
+    jdf = self._jdf.select(self._jcols(*cols))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/py4j/java_gateway.py", line 1322, in __call__
+    return_value = get_return_value(
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/pyspark/errors/exceptions/captured.py", line 185, in deco
+    raise converted from None
+pyspark.errors.exceptions.captured.AnalysisException: [UNRESOLVED_COLUMN.WITH_SUGGESTION] A column or function parameter with name `news_count` cannot be resolved. Did you mean one of the following? [`symbol`, `max_price`, `min_price`, `window_end`, `first_price`].;
+'Project [timestamp#212, symbol#87, current_price#120, first_price#119, min_price#106, max_price#108, price_change_pct#133, price_tick_count#110L, coalesce('news_count, 0) AS news_count#228, coalesce('sentiment_label, Neutral) AS sentiment_label#229, coalesce('sentiment_score, 0.0) AS sentiment_score#230, coalesce('headline, No correlated news in current processing window.) AS headline#231, window_start#213, window_end#214]
++- Project [to_timestamp(from_unixtime(cast(cast((cast(timestamp_ms#121L as double) / cast(1000 as double)) as double) as bigint), yyyy-MM-dd HH:mm:ss, Some(UTC)), None, TimestampType, Some(UTC), false) AS timestamp#212, symbol#87, current_price#120, first_price#119, min_price#106, max_price#108, price_change_pct#133, price_tick_count#110L, window#96-T30000ms.start AS window_start#213, window#96-T30000ms.end AS window_end#214]
+   +- LogicalRDD [window#96-T30000ms, symbol#87, first_price#119, current_price#120, timestamp_ms#121L, min_price#106, max_price#108, price_tick_count#110L, price_change_pct#133], false
+
+
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights: 100%|██████████| 201/201 [00:00<00:00, 8233.44it/s]
+26/03/26 12:49:16 ERROR MicroBatchExecution: Query crypto_realtime_alert_news_snapshots [id = 75d8e2dd-d5d6-4ea3-b640-c016b2d2fc81, runId = 771276f7-4aa1-4401-900c-e6f17c5fd0da] terminated with error
+py4j.Py4JException: Error while sending a command.
+	at py4j.CallbackClient.sendCommand(CallbackClient.java:397)
+	at py4j.CallbackClient.sendCommand(CallbackClient.java:356)
+	at py4j.reflection.PythonProxyHandler.invoke(PythonProxyHandler.java:106)
+	at jdk.proxy3/jdk.proxy3.$Proxy30.call(Unknown Source)
+	at org.apache.spark.sql.execution.streaming.sources.PythonForeachBatchHelper$.$anonfun$callForeachBatch$1(ForeachBatchSink.scala:53)
+	at org.apache.spark.sql.execution.streaming.sources.PythonForeachBatchHelper$.$anonfun$callForeachBatch$1$adapted(ForeachBatchSink.scala:53)
+	at org.apache.spark.sql.execution.streaming.sources.ForeachBatchSink.addBatch(ForeachBatchSink.scala:34)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$17(MicroBatchExecution.scala:732)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:125)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:201)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:108)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:66)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$16(MicroBatchExecution.scala:729)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:427)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:425)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runBatch(MicroBatchExecution.scala:729)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$2(MicroBatchExecution.scala:286)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:427)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:425)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$1(MicroBatchExecution.scala:249)
+	at org.apache.spark.sql.execution.streaming.ProcessingTimeExecutor.execute(TriggerExecutor.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runActivatedStream(MicroBatchExecution.scala:239)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.$anonfun$runStream$1(StreamExecution.scala:311)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.org$apache$spark$sql$execution$streaming$StreamExecution$$runStream(StreamExecution.scala:289)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.$anonfun$run$1(StreamExecution.scala:211)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.JobArtifactSet$.withActiveJobArtifactState(JobArtifactSet.scala:94)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.run(StreamExecution.scala:211)
+Caused by: py4j.Py4JNetworkException: Error while sending a command: c
+p0
+call
+ro261
+L0
+e
+
+	at py4j.ClientServerConnection.sendCommand(ClientServerConnection.java:253)
+	at py4j.CallbackClient.sendCommand(CallbackClient.java:384)
+	... 33 more
+Caused by: py4j.Py4JException: Received empty command
+	at py4j.ClientServerConnection.sendCommand(ClientServerConnection.java:236)
+	... 34 more
+[1mBertForSequenceClassification LOAD REPORT[0m from: ProsusAI/finbert
+Key                          | Status     |  | 
+-----------------------------+------------+--+-
+bert.embeddings.position_ids | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+
+[2026-03-26T12:53:04.179273+00:00] starting spark_pipeline with module src.spark_pipeline
+:: loading settings :: url = jar:file:/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/pyspark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /tmp/crypto-realtime-alert/.ivy2/cache
+The jars for the packages stored in: /tmp/crypto-realtime-alert/.ivy2/jars
+org.apache.spark#spark-sql-kafka-0-10_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-712fbba7-fe71-4803-9e9e-52f9c4a5d525;1.0
+	confs: [default]
+	found org.apache.spark#spark-sql-kafka-0-10_2.12;3.5.1 in central
+	found org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.5.1 in central
+	found org.apache.kafka#kafka-clients;3.4.1 in central
+	found org.lz4#lz4-java;1.8.0 in central
+	found org.xerial.snappy#snappy-java;1.1.10.3 in central
+	found org.slf4j#slf4j-api;2.0.7 in central
+	found org.apache.hadoop#hadoop-client-runtime;3.3.4 in central
+	found org.apache.hadoop#hadoop-client-api;3.3.4 in central
+	found commons-logging#commons-logging;1.1.3 in central
+	found com.google.code.findbugs#jsr305;3.0.0 in central
+	found org.apache.commons#commons-pool2;2.11.1 in central
+:: resolution report :: resolve 671ms :: artifacts dl 33ms
+	:: modules in use:
+	com.google.code.findbugs#jsr305;3.0.0 from central in [default]
+	commons-logging#commons-logging;1.1.3 from central in [default]
+	org.apache.commons#commons-pool2;2.11.1 from central in [default]
+	org.apache.hadoop#hadoop-client-api;3.3.4 from central in [default]
+	org.apache.hadoop#hadoop-client-runtime;3.3.4 from central in [default]
+	org.apache.kafka#kafka-clients;3.4.1 from central in [default]
+	org.apache.spark#spark-sql-kafka-0-10_2.12;3.5.1 from central in [default]
+	org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.5.1 from central in [default]
+	org.lz4#lz4-java;1.8.0 from central in [default]
+	org.slf4j#slf4j-api;2.0.7 from central in [default]
+	org.xerial.snappy#snappy-java;1.1.10.3 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   11  |   0   |   0   |   0   ||   11  |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-712fbba7-fe71-4803-9e9e-52f9c4a5d525
+	confs: [default]
+	0 artifacts copied, 11 already retrieved (0kB/14ms)
+26/03/26 12:53:11 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+2026-03-26 12:53:17,852 | INFO | __main__ | Spark streaming queries started successfully: crypto_realtime_alert_news_snapshots, crypto_realtime_alert_pipeline
+[Stage 0:>                                                          (0 + 1) / 1][Stage 0:>                  (0 + 1) / 1][Stage 1:>                  (0 + 3) / 3][Stage 0:>                  (0 + 1) / 1][Stage 1:======>            (1 + 2) / 3][Stage 0:>                                                          (0 + 1) / 1][Stage 0:>                  (0 + 1) / 1][Stage 2:>                  (0 + 1) / 1]                                                                                [Stage 0:>                                                          (0 + 1) / 1][Stage 0:>                  (0 + 1) / 1][Stage 4:>                  (0 + 4) / 4]                                                                                [Stage 0:>                                                          (0 + 1) / 1][Stage 0:>                  (0 + 1) / 1][Stage 7:>                  (0 + 1) / 1]                                                                                Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights: 100%|██████████| 201/201 [00:00<00:00, 7293.31it/s]
+[1mBertForSequenceClassification LOAD REPORT[0m from: ProsusAI/finbert
+Key                          | Status     |  | 
+-----------------------------+------------+--+-
+bert.embeddings.position_ids | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+2026-03-26 12:53:36,361 | INFO | src.nlp_analyzer | FinBERT model loaded successfully model=ProsusAI/finbert
+[Stage 0:>                                                          (0 + 1) / 1]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-03-26 12:53:37,000 | WARNING | huggingface_hub.utils._http | Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[Stage 0:>                  (0 + 1) / 1][Stage 9:>                  (0 + 4) / 4]                                                                                2026-03-26 12:53:38,070 | INFO | __main__ | Processing alert micro-batch batch_id=0 rows=127717 warning_rows=0
+[Stage 0:>                  (0 + 1) / 1][Stage 15:>                 (0 + 4) / 4][Stage 0:>                  (0 + 1) / 1][Stage 15:=============>    (3 + 1) / 4]                                                                                [Stage 0:>                                                          (0 + 1) / 1][Stage 0:>                  (0 + 1) / 1][Stage 17:>                 (0 + 4) / 4]                                                                                [Stage 0:>                                                          (0 + 1) / 1][Stage 0:>                  (0 + 1) / 1][Stage 18:=========>        (1 + 1) / 2][Stage 0:>                                                          (0 + 1) / 1]                                                                                [Stage 20:>                                                         (0 + 3) / 3][Stage 20:>                 (0 + 3) / 3][Stage 23:>                 (0 + 4) / 4][Stage 20:>                                                         (0 + 3) / 3]                                                                                [Stage 20:>                                                         (0 + 3) / 3][Stage 20:>                 (0 + 3) / 3][Stage 26:>                 (0 + 1) / 1]                                                                                [Stage 20:>                                                         (0 + 3) / 3]                                                                                2026-03-26 12:53:56,793 | INFO | __main__ | Processing alert micro-batch batch_id=1 rows=50 warning_rows=0
+[Stage 20:>                 (0 + 3) / 3][Stage 34:>                 (0 + 4) / 4][Stage 20:>                 (0 + 3) / 3][Stage 34:====>             (1 + 3) / 4][Stage 20:>                 (0 + 3) / 3][Stage 34:=========>        (2 + 2) / 4][Stage 20:>                 (0 + 3) / 3][Stage 34:=============>    (3 + 1) / 4]                                                                                [Stage 20:>                 (0 + 3) / 3][Stage 36:>                 (0 + 4) / 4][Stage 20:>                 (0 + 3) / 3][Stage 36:=========>        (2 + 2) / 4][Stage 20:>                 (0 + 3) / 3][Stage 36:=============>    (3 + 1) / 4]                                                                                [Stage 20:>                                                         (0 + 3) / 3][Stage 20:>                 (0 + 3) / 3][Stage 38:>                 (0 + 1) / 1]                                                                                [Stage 20:>                 (0 + 3) / 3][Stage 40:>                 (0 + 3) / 3]                                                                                Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights: 100%|██████████| 201/201 [00:00<00:00, 19058.98it/s]
+[1mBertForSequenceClassification LOAD REPORT[0m from: ProsusAI/finbert
+Key                          | Status     |  | 
+-----------------------------+------------+--+-
+bert.embeddings.position_ids | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+2026-03-26 12:54:07,027 | INFO | src.nlp_analyzer | FinBERT model loaded successfully model=ProsusAI/finbert
+[Stage 20:>                                                         (0 + 3) / 3]                                                                                Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights: 100%|██████████| 201/201 [00:00<00:00, 9961.66it/s]
+[1mBertForSequenceClassification LOAD REPORT[0m from: ProsusAI/finbert
+Key                          | Status     |  | 
+-----------------------------+------------+--+-
+bert.embeddings.position_ids | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+2026-03-26 12:54:07,657 | INFO | src.nlp_analyzer | FinBERT model loaded successfully model=ProsusAI/finbert
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights: 100%|██████████| 201/201 [00:00<00:00, 12402.61it/s]
+[1mBertForSequenceClassification LOAD REPORT[0m from: ProsusAI/finbert
+Key                          | Status     |  | 
+-----------------------------+------------+--+-
+bert.embeddings.position_ids | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+2026-03-26 12:54:07,781 | INFO | src.nlp_analyzer | FinBERT model loaded successfully model=ProsusAI/finbert
+[Stage 20:>                 (0 + 3) / 3][Stage 47:>                 (0 + 3) / 3][Stage 20:>                 (0 + 3) / 3][Stage 47:============>     (2 + 1) / 3]                                                                                [Stage 20:>                                                         (0 + 3) / 3]                                                                                2026-03-26 12:54:09,332 | INFO | __main__ | Processing alert micro-batch batch_id=2 rows=10 warning_rows=0
+[Stage 20:>                 (0 + 3) / 3][Stage 55:>                 (0 + 4) / 4][Stage 20:>                 (0 + 3) / 3][Stage 55:====>             (1 + 3) / 4]                                                                                [Stage 20:>                 (0 + 3) / 3][Stage 57:>                 (0 + 4) / 4][Stage 20:>                 (0 + 3) / 3][Stage 57:====>             (1 + 3) / 4][Stage 20:>                 (0 + 3) / 3][Stage 57:=============>    (3 + 1) / 4]                                                                                [Stage 20:>                                                         (0 + 3) / 3]                                                                                [Stage 20:>                 (0 + 3) / 3][Stage 61:>                 (0 + 3) / 3]                                                                                [Stage 20:>                                                         (0 + 3) / 3]                                                                                [Stage 20:>                                                         (0 + 3) / 3][Stage 20:>                 (0 + 3) / 3][Stage 66:>                 (0 + 1) / 1]                                                                                [Stage 20:>                 (0 + 3) / 3][Stage 68:>                 (0 + 3) / 3]                                                                                2026-03-26 12:54:22,020 | INFO | __main__ | Processing alert micro-batch batch_id=3 rows=5 warning_rows=0
+[Stage 20:>                 (0 + 3) / 3][Stage 76:>                 (0 + 4) / 4]                                                                                [Stage 20:>                 (0 + 3) / 3][Stage 78:>                 (0 + 4) / 4][Stage 20:>                 (0 + 3) / 3][Stage 78:=============>    (3 + 1) / 4]                                                                                [Stage 20:>                                                         (0 + 3) / 3]                                                                                [Stage 20:======>           (1 + 2) / 3][Stage 82:>                 (0 + 3) / 3]                                                                                2026-03-26 12:54:30,864 | INFO | __main__ | Processing alert micro-batch batch_id=4 rows=5 warning_rows=0
+[Stage 20:============>     (2 + 1) / 3][Stage 97:>                 (0 + 4) / 4]                                                                                [Stage 20:======================================>                   (2 + 1) / 3][Stage 20:============>     (2 + 1) / 3][Stage 99:>                 (0 + 4) / 4][Stage 99:>                                                         (0 + 4) / 4]                                                                                [Stage 99:>                                                         (0 + 4) / 4][Stage 99:>                 (0 + 4) / 4][Stage 100:>                (0 + 3) / 3][Stage 99:====>             (1 + 3) / 4][Stage 100:>                (0 + 3) / 3][Stage 99:=============>    (3 + 1) / 4][Stage 100:>                (0 + 3) / 3]                                                                                [Stage 100:>                                                        (0 + 3) / 3][Stage 100:>                (0 + 3) / 3][Stage 104:>                (0 + 1) / 1]                                                                                [Stage 100:>                (0 + 3) / 3][Stage 106:>                (0 + 3) / 3][Stage 100:>                (0 + 3) / 3][Stage 106:===========>     (2 + 1) / 3]                                                                                [Stage 100:>                                                        (0 + 3) / 3][Stage 100:>                (0 + 3) / 3][Stage 111:>                (0 + 1) / 1]                                                                                [Stage 100:>                (0 + 3) / 3][Stage 113:>                (0 + 3) / 3][Stage 100:>                (0 + 3) / 3][Stage 113:=====>           (1 + 2) / 3][Stage 100:>                (0 + 3) / 3][Stage 113:===========>     (2 + 1) / 3]                                                                                2026-03-26 12:54:42,559 | INFO | __main__ | Processing alert micro-batch batch_id=5 rows=10 warning_rows=0
+[Stage 100:>                (0 + 3) / 3][Stage 121:>                (0 + 4) / 4][Stage 100:>                (0 + 3) / 3][Stage 121:====>            (1 + 3) / 4][Stage 100:>                (0 + 3) / 3][Stage 121:========>        (2 + 2) / 4]                                                                                [Stage 100:>                (0 + 3) / 3][Stage 123:>                (0 + 4) / 4][Stage 100:>                (0 + 3) / 3][Stage 123:====>            (1 + 3) / 4][Stage 100:>                (0 + 3) / 3][Stage 123:========>        (2 + 2) / 4][Stage 100:>                (0 + 3) / 3][Stage 123:============>    (3 + 1) / 4]                                                                                [Stage 100:>                                                        (0 + 3) / 3][Stage 100:>                (0 + 3) / 3][Stage 124:========>        (1 + 1) / 2][Stage 100:>                                                        (0 + 3) / 3]Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]                                                                                Loading weights: 100%|██████████| 201/201 [00:00<00:00, 7409.32it/s]
+[1mBertForSequenceClassification LOAD REPORT[0m from: ProsusAI/finbert
+Key                          | Status     |  | 
+-----------------------------+------------+--+-
+bert.embeddings.position_ids | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+2026-03-26 12:54:50,638 | INFO | src.nlp_analyzer | FinBERT model loaded successfully model=ProsusAI/finbert
+[Stage 100:>                (0 + 3) / 3][Stage 127:>                (0 + 3) / 3]                                                                                [Stage 100:>                                                        (0 + 3) / 3]                                                                                [Stage 100:>                (0 + 3) / 3][Stage 134:>                (0 + 3) / 3]                                                                                2026-03-26 12:54:53,866 | INFO | __main__ | Processing alert micro-batch batch_id=6 rows=5 warning_rows=0
+[Stage 100:>                (0 + 3) / 3][Stage 142:>                (0 + 4) / 4][Stage 100:>                (0 + 3) / 3][Stage 142:============>    (3 + 1) / 4]                                                                                [Stage 100:>                (0 + 3) / 3][Stage 144:>                (0 + 4) / 4][Stage 100:>                (0 + 3) / 3][Stage 144:====>            (1 + 3) / 4]                                                                                [Stage 100:===================>                                     (1 + 2) / 3]                                                                                [Stage 100:=====>           (1 + 2) / 3][Stage 148:>                (0 + 3) / 3]                                                                                [Stage 100:======================================>                  (2 + 1) / 3]                                                                                2026-03-26 12:55:03,407 | INFO | __main__ | Processing alert micro-batch batch_id=7 rows=5 warning_rows=0
+[Stage 100:===========>     (2 + 1) / 3][Stage 163:>                (0 + 4) / 4]                                                                                [Stage 100:===========>     (2 + 1) / 3][Stage 165:>                (0 + 4) / 4]                                                                                [Stage 100:======================================>                  (2 + 1) / 3]                                                                                2026-03-26 12:55:09,044 | INFO | __main__ | Processing news micro-batch batch_id=0 rows=124 distinct_symbols=5
+[Stage 168:>                                                        (0 + 1) / 1]                                                                                2026-03-26 12:55:10,477 | INFO | __main__ | Processing alert micro-batch batch_id=8 rows=6 warning_rows=0
+[Stage 168:>                (0 + 1) / 1][Stage 181:>                (0 + 4) / 4][Stage 168:>                (0 + 1) / 1][Stage 181:====>            (1 + 3) / 4]                                                                                [Stage 168:>                (0 + 1) / 1][Stage 183:====>            (1 + 3) / 4]                                                                                [Stage 168:>                                                        (0 + 1) / 1]                                                                                2026-03-26 12:55:16,225 | INFO | __main__ | Processing alert micro-batch batch_id=9 rows=5 warning_rows=0
+[Stage 168:>                (0 + 1) / 1][Stage 198:>                (0 + 4) / 4][Stage 168:>                (0 + 1) / 1][Stage 198:========>        (2 + 2) / 4][Stage 168:>                (0 + 1) / 1][Stage 198:============>    (3 + 1) / 4]                                                                                [Stage 168:>                (0 + 1) / 1][Stage 200:>                (0 + 4) / 4][Stage 168:>                (0 + 1) / 1][Stage 200:====>            (1 + 3) / 4][Stage 168:>                (0 + 1) / 1][Stage 200:========>        (2 + 2) / 4]                                                                                [Stage 168:>                                                        (0 + 1) / 1]                                                                                [Stage 168:>                                                        (0 + 1) / 1]                                                                                2026-03-26 12:55:22,129 | INFO | __main__ | Processing alert micro-batch batch_id=10 rows=5 warning_rows=0
+[Stage 168:>                (0 + 1) / 1][Stage 215:>                (0 + 4) / 4]                                                                                [Stage 168:>                (0 + 1) / 1][Stage 217:>                (0 + 4) / 4]                                                                                [Stage 217:============================>                            (2 + 2) / 4][Stage 217:========>        (2 + 2) / 4][Stage 218:>                (0 + 3) / 3][Stage 217:============>    (3 + 1) / 4][Stage 218:>                (0 + 3) / 3]                                                                                [Stage 218:>                                                        (0 + 3) / 3]                                                                                [Stage 218:>                                                        (0 + 3) / 3][Stage 218:>                (0 + 3) / 3][Stage 225:>                (0 + 1) / 1]                                                                                2026-03-26 12:55:33,638 | INFO | __main__ | Processing alert micro-batch batch_id=11 rows=9 warning_rows=0
+[Stage 218:>                (0 + 3) / 3][Stage 233:>                (0 + 4) / 4][Stage 218:>                (0 + 3) / 3][Stage 233:====>            (1 + 3) / 4]                                                                                [Stage 218:>                (0 + 3) / 3][Stage 235:>                (0 + 4) / 4][Stage 218:>                (0 + 3) / 3][Stage 235:====>            (1 + 3) / 4][Stage 218:>                (0 + 3) / 3][Stage 235:========>        (2 + 2) / 4][Stage 218:>                (0 + 3) / 3][Stage 235:============>    (3 + 1) / 4]                                                                                [Stage 218:>                                                        (0 + 3) / 3]                                                                                [Stage 218:>                                                        (0 + 3) / 3][Stage 218:>                (0 + 3) / 3][Stage 242:>                (0 + 1) / 1]                                                                                2026-03-26 12:55:43,307 | INFO | __main__ | Processing alert micro-batch batch_id=12 rows=5 warning_rows=0
+[Stage 218:>                (0 + 3) / 3][Stage 250:>                (0 + 4) / 4][Stage 218:>                (0 + 3) / 3][Stage 250:====>            (1 + 3) / 4][Stage 218:>                (0 + 3) / 3][Stage 250:============>    (3 + 1) / 4]                                                                                [Stage 218:=====>           (1 + 2) / 3][Stage 252:>                (0 + 4) / 4][Stage 218:=====>           (1 + 2) / 3][Stage 252:========>        (2 + 2) / 4]                                                                                [Stage 218:===================>                                     (1 + 2) / 3][Stage 218:======================================>                  (2 + 1) / 3]                                                                                [Stage 255:>                                                        (0 + 3) / 3][Stage 255:>                (0 + 3) / 3][Stage 262:>                (0 + 1) / 1]                                                                                2026-03-26 12:55:52,743 | INFO | __main__ | Processing alert micro-batch batch_id=13 rows=5 warning_rows=0
+[Stage 255:>                (0 + 3) / 3][Stage 270:>                (0 + 4) / 4][Stage 255:>                (0 + 3) / 3][Stage 270:========>        (2 + 2) / 4]                                                                                [Stage 255:>                (0 + 3) / 3][Stage 272:>                (0 + 4) / 4][Stage 255:>                (0 + 3) / 3][Stage 272:========>        (2 + 2) / 4][Stage 255:>                (0 + 3) / 3][Stage 272:============>    (3 + 1) / 4]                                                                                [Stage 255:>                                                        (0 + 3) / 3][Stage 255:>                (0 + 3) / 3][Stage 273:========>        (1 + 1) / 2][Stage 255:>                (0 + 3) / 3][Stage 274:>                (0 + 1) / 1]                                                                                [Stage 255:>                                                        (0 + 3) / 3]                                                                                2026-03-26 12:56:03,752 | INFO | __main__ | Processing alert micro-batch batch_id=14 rows=9 warning_rows=0
+[Stage 255:>                (0 + 3) / 3][Stage 287:>                (0 + 4) / 4][Stage 255:>                (0 + 3) / 3][Stage 287:========>        (2 + 2) / 4]                                                                                [Stage 255:>                (0 + 3) / 3][Stage 289:>                (0 + 4) / 4][Stage 255:>                (0 + 3) / 3][Stage 289:====>            (1 + 3) / 4][Stage 255:>                (0 + 3) / 3][Stage 289:========>        (2 + 2) / 4][Stage 255:>                (0 + 3) / 3][Stage 289:============>    (3 + 1) / 4]                                                                                [Stage 255:>                                                        (0 + 3) / 3][Stage 255:>                (0 + 3) / 3][Stage 291:>                (0 + 1) / 1]                                                                                [Stage 255:>                                                        (0 + 3) / 3][Stage 255:>                (0 + 3) / 3][Stage 296:>                (0 + 1) / 1]                                                                                2026-03-26 12:56:13,208 | INFO | __main__ | Processing alert micro-batch batch_id=15 rows=5 warning_rows=0
+[Stage 255:=====>           (1 + 2) / 3][Stage 304:>                (0 + 4) / 4][Stage 255:===========>     (2 + 1) / 3][Stage 304:>                (0 + 4) / 4][Stage 255:===========>     (2 + 1) / 3][Stage 304:============>    (3 + 1) / 4]                                                                                [Stage 255:===========>     (2 + 1) / 3][Stage 306:>                (0 + 4) / 4][Stage 255:===========>     (2 + 1) / 3][Stage 306:========>        (2 + 2) / 4][Stage 255:===========>     (2 + 1) / 3][Stage 306:============>    (3 + 1) / 4]                                                                                [Stage 257:>                                                        (0 + 4) / 4][Stage 257:============================>                            (2 + 2) / 4]                                                                                [Stage 307:>                                                        (0 + 1) / 1]                                                                                [Stage 307:>                                                        (0 + 1) / 1][Stage 307:>  (0 + 1) / 1][Stage 313:>  (1 + 7) / 8][Stage 315:>  (0 + 0) / 4][Stage 307:>  (0 + 1) / 1][Stage 313:=> (3 + 5) / 8][Stage 315:>  (0 + 2) / 4][Stage 307:>  (0 + 1) / 1][Stage 313:==>(7 + 1) / 8][Stage 315:>  (1 + 3) / 4][Stage 307:>                                                        (0 + 1) / 1]                                                                                [Stage 307:>                                                        (0 + 1) / 1][Stage 307:>  (0 + 1) / 1][Stage 318:=> (3 + 5) / 8][Stage 319:>  (0 + 2) / 4][Stage 307:>  (0 + 1) / 1][Stage 318:==>(7 + 1) / 8][Stage 319:=> (2 + 2) / 4]                                                                                2026-03-26 12:56:24,762 | INFO | __main__ | Processing alert micro-batch batch_id=16 rows=5 warning_rows=0
+[Stage 307:>                (0 + 1) / 1][Stage 330:>                (0 + 4) / 4][Stage 307:>                (0 + 1) / 1][Stage 330:====>            (1 + 3) / 4]                                                                                [Stage 307:>                (0 + 1) / 1][Stage 334:========>        (2 + 2) / 4][Stage 307:>                (0 + 1) / 1][Stage 334:============>    (3 + 1) / 4]                                                                                [Stage 307:>                                                        (0 + 1) / 1]                                                                                Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights: 100%|██████████| 201/201 [00:00<00:00, 7549.52it/s]
+[1mBertForSequenceClassification LOAD REPORT[0m from: ProsusAI/finbert
+Key                          | Status     |  | 
+-----------------------------+------------+--+-
+bert.embeddings.position_ids | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+2026-03-26 12:56:30,874 | INFO | src.nlp_analyzer | FinBERT model loaded successfully model=ProsusAI/finbert
+[Stage 307:>                                                        (0 + 1) / 1][Stage 307:>  (0 + 1) / 1][Stage 340:>  (0 + 7) / 8][Stage 342:>  (0 + 0) / 4][Stage 307:>  (0 + 1) / 1][Stage 340:=> (4 + 4) / 8][Stage 342:>  (0 + 3) / 4][Stage 307:>  (0 + 1) / 1][Stage 340:==>(6 + 2) / 8][Stage 342:>  (0 + 4) / 4][Stage 307:>                (0 + 1) / 1][Stage 340:==============>  (7 + 1) / 8][Stage 307:>                                                        (0 + 1) / 1]                                                                                [Stage 344:>                                                        (0 + 3) / 3][Stage 344:>                (0 + 3) / 3][Stage 347:>                (0 + 5) / 8][Stage 344:>  (0 + 3) / 3][Stage 347:>  (0 + 5) / 8][Stage 348:>  (0 + 0) / 4][Stage 344:>  (0 + 3) / 3][Stage 347:>  (1 + 5) / 8][Stage 348:>  (0 + 0) / 4][Stage 344:>  (0 + 3) / 3][Stage 347:=> (3 + 5) / 8][Stage 348:>  (0 + 0) / 4][Stage 344:>  (0 + 3) / 3][Stage 347:=> (5 + 3) / 8][Stage 348:>  (0 + 2) / 4][Stage 344:>  (0 + 3) / 3][Stage 347:==>(7 + 1) / 8][Stage 348:>  (1 + 3) / 4][Stage 344:>  (0 + 3) / 3][Stage 347:==>(7 + 1) / 8][Stage 348:=> (2 + 2) / 4][Stage 344:>                                                        (0 + 3) / 3]                                                                                2026-03-26 12:56:36,806 | INFO | __main__ | Processing alert micro-batch batch_id=17 rows=9 warning_rows=0
+[Stage 344:===========>     (2 + 1) / 3][Stage 359:>                (0 + 4) / 4]                                                                                [Stage 359:>                                                        (0 + 4) / 4][Stage 359:>                (0 + 4) / 4][Stage 360:>                (0 + 3) / 3][Stage 359:====>            (1 + 3) / 4][Stage 360:>                (0 + 3) / 3][Stage 359:============>    (3 + 1) / 4][Stage 360:>                (0 + 3) / 3]                                                                                [Stage 360:>                (0 + 3) / 3][Stage 366:>                (0 + 4) / 4][Stage 360:>                (0 + 3) / 3][Stage 366:============>    (3 + 1) / 4][Stage 360:=====>           (1 + 2) / 3][Stage 366:============>    (3 + 1) / 4][Stage 360:===========>     (2 + 1) / 3][Stage 366:============>    (3 + 1) / 4]                                                                                2026-03-26 12:56:41,596 | INFO | __main__ | Processing news micro-batch batch_id=1 rows=10 distinct_symbols=1
+[Stage 367:>                                                        (0 + 1) / 1][Stage 367:>                (0 + 1) / 1][Stage 368:========>        (1 + 1) / 2][Stage 367:>                                                        (0 + 1) / 1]                                                                                [Stage 373:>                                                        (0 + 3) / 3][Stage 373:>                (0 + 3) / 3][Stage 374:>                (0 + 5) / 8][Stage 373:>  (0 + 3) / 3][Stage 374:>  (1 + 5) / 8][Stage 376:>  (0 + 0) / 4][Stage 373:>  (0 + 3) / 3][Stage 374:=> (3 + 5) / 8][Stage 376:>  (0 + 0) / 4][Stage 373:>  (0 + 3) / 3][Stage 374:==>(6 + 2) / 8][Stage 376:>  (0 + 3) / 4][Stage 373:>  (0 + 3) / 3][Stage 374:==>(7 + 1) / 8][Stage 376:>  (0 + 4) / 4][Stage 373:>  (0 + 3) / 3][Stage 374:==>(7 + 1) / 8][Stage 376:==>(3 + 1) / 4][Stage 373:>                                                        (0 + 3) / 3][Stage 373:=====>           (1 + 2) / 3][Stage 377:>                (0 + 1) / 1]                                                                                [Stage 380:>                                                        (0 + 8) / 8][Stage 380:==>              (1 + 7) / 8][Stage 383:>                (0 + 1) / 3][Stage 380:======>          (3 + 5) / 8][Stage 383:>                (0 + 3) / 3][Stage 380:========>        (4 + 4) / 8][Stage 383:>                (0 + 3) / 3][Stage 380:==========>      (5 + 3) / 8][Stage 383:>                (0 + 3) / 3][Stage 383:>                                                        (0 + 3) / 3]                                                                                2026-03-26 12:56:49,145 | INFO | __main__ | Processing alert micro-batch batch_id=18 rows=5 warning_rows=0
+[Stage 383:>                (0 + 3) / 3][Stage 394:>                (0 + 4) / 4][Stage 383:=====>           (1 + 2) / 3][Stage 394:>                (0 + 4) / 4][Stage 383:===========>     (2 + 1) / 3][Stage 394:>                (0 + 4) / 4][Stage 383:===========>     (2 + 1) / 3][Stage 394:====>            (1 + 3) / 4]                                                                                [Stage 398:>                                                        (0 + 4) / 4][Stage 385:>                (0 + 4) / 4][Stage 398:>                (0 + 4) / 4]                                                                                [Stage 398:>                                                        (0 + 4) / 4][Stage 398:============================>                            (2 + 2) / 4]                                                                                [Stage 406:>                                                        (0 + 8) / 8][Stage 406:=======>                                                 (1 + 7) / 8][Stage 406:=====================>                                   (3 + 5) / 8][Stage 406:===================================>                     (5 + 3) / 8]                                                                                [Stage 409:==========>      (5 + 3) / 8][Stage 410:>                (0 + 4) / 4]                                                                                2026-03-26 12:56:58,864 | INFO | __main__ | Processing alert micro-batch batch_id=19 rows=5 warning_rows=0
+[Stage 421:>                                                        (0 + 4) / 4]                                                                                [Stage 425:============================>                            (2 + 2) / 4]                                                                                [Stage 431:>                (0 + 8) / 8][Stage 433:>                (0 + 0) / 4][Stage 431:========>        (4 + 4) / 8][Stage 433:>                (0 + 4) / 4]                                                                                [Stage 436:>                (0 + 8) / 8][Stage 437:>                (0 + 0) / 4][Stage 436:======>          (3 + 5) / 8][Stage 437:>                (0 + 3) / 4][Stage 436:==============>  (7 + 1) / 8][Stage 437:====>            (1 + 3) / 4]                                                                                2026-03-26 12:57:05,578 | INFO | __main__ | Processing alert micro-batch batch_id=20 rows=10 warning_rows=0
+[Stage 448:>                                                        (0 + 4) / 4][Stage 448:==========================================>              (3 + 1) / 4]                                                                                [Stage 452:==========================================>              (3 + 1) / 4]                                                                                [Stage 456:>                                                        (0 + 3) / 3]                                                                                [Stage 460:>                                                        (0 + 8) / 8][Stage 460:==>              (1 + 7) / 8][Stage 462:>                (0 + 1) / 4][Stage 460:======>          (3 + 5) / 8][Stage 462:====>            (1 + 3) / 4][Stage 460:=================================================>       (7 + 1) / 8]                                                                                [Stage 466:>                                                        (0 + 8) / 8][Stage 466:=====================>                                   (3 + 5) / 8][Stage 466:============================>                            (4 + 4) / 8]                                                                                2026-03-26 12:57:14,991 | INFO | __main__ | Processing alert micro-batch batch_id=21 rows=5 warning_rows=0
+[Stage 477:>                                                        (0 + 4) / 4][Stage 477:============================>                            (2 + 2) / 4]                                                                                [Stage 481:>                                                        (0 + 4) / 4][Stage 481:==============>                                          (1 + 3) / 4][Stage 481:============================>                            (2 + 2) / 4]                                                                                [Stage 489:==>              (1 + 7) / 8][Stage 491:>                (0 + 1) / 4][Stage 489:========>        (4 + 4) / 8][Stage 491:>                (0 + 4) / 4]                                                                                [Stage 495:============================>                            (4 + 4) / 8]                                                                                2026-03-26 12:57:23,805 | INFO | __main__ | Processing alert micro-batch batch_id=22 rows=5 warning_rows=0
+[Stage 506:>                                                        (0 + 4) / 4][Stage 506:==========================================>              (3 + 1) / 4]                                                                                [Stage 510:>                                                        (0 + 4) / 4][Stage 510:============================>                            (2 + 2) / 4]                                                                                [Stage 516:========>        (4 + 4) / 8][Stage 518:>                (0 + 4) / 4][Stage 518:============================>                            (2 + 2) / 4]                                                                                [Stage 521:============>    (3 + 1) / 4][Stage 522:>                (0 + 7) / 8][Stage 522:>                                                        (0 + 8) / 8][Stage 522:=======>                                                 (1 + 7) / 8][Stage 522:=====================>                                   (3 + 5) / 8][Stage 522:===================================>                     (5 + 3) / 8][Stage 522:=================================================>       (7 + 1) / 8]                                                                                2026-03-26 12:57:35,755 | INFO | __main__ | Processing alert micro-batch batch_id=23 rows=9 warning_rows=0
+[Stage 533:>                                                        (0 + 4) / 4][Stage 533:==============>                                          (1 + 3) / 4]                                                                                [Stage 537:==========================================>              (3 + 1) / 4]                                                                                [Stage 538:============================>                            (1 + 1) / 2]                                                                                [Stage 545:============================>                            (4 + 4) / 8]                                                                                [Stage 549:=====================>                                   (3 + 5) / 8][Stage 549:=================================================>       (7 + 1) / 8]                                                                                2026-03-26 12:57:42,942 | INFO | __main__ | Processing alert micro-batch batch_id=24 rows=5 warning_rows=0
+[Stage 560:>                                                        (0 + 4) / 4]                                                                                [Stage 564:============================>                            (2 + 2) / 4][Stage 564:==========================================>              (3 + 1) / 4]                                                                                [Stage 570:====>            (2 + 6) / 8][Stage 572:>                (0 + 2) / 4][Stage 570:============>    (6 + 2) / 8][Stage 572:>                (0 + 4) / 4]                                                                                [Stage 576:>                                                        (0 + 8) / 8][Stage 576:============================>                            (4 + 4) / 8]                                                                                2026-03-26 12:57:53,672 | INFO | __main__ | Processing alert micro-batch batch_id=25 rows=5 warning_rows=0
+[Stage 587:>                                                        (0 + 4) / 4][Stage 587:==============>                                          (1 + 3) / 4]                                                                                [Stage 591:==============>                                          (1 + 3) / 4]                                                                                [Stage 599:=======>                                                 (1 + 7) / 8][Stage 599:==============>                                          (2 + 6) / 8][Stage 599:=================================================>       (7 + 1) / 8]                                                                                [Stage 603:>                                                        (0 + 8) / 8][Stage 603:=====================>                                   (3 + 5) / 8]                                                                                2026-03-26 12:58:03,652 | INFO | __main__ | Processing alert micro-batch batch_id=26 rows=9 warning_rows=0
+[Stage 614:>                                                        (0 + 4) / 4]                                                                                [Stage 618:==========================================>              (3 + 1) / 4]                                                                                [Stage 622:>                                                        (0 + 3) / 3]                                                                                [Stage 626:>                (0 + 8) / 8][Stage 628:>                (0 + 0) / 4][Stage 626:======>          (3 + 5) / 8][Stage 628:>                (0 + 3) / 4]                                                                                [Stage 631:======>          (3 + 5) / 8][Stage 632:>                (0 + 3) / 4][Stage 631:=================================================>       (7 + 1) / 8]                                                                                2026-03-26 12:58:15,133 | INFO | __main__ | Processing alert micro-batch batch_id=27 rows=5 warning_rows=0
+[Stage 643:>                                                        (0 + 4) / 4][Stage 643:============================>                            (2 + 2) / 4]                                                                                [Stage 647:============================>                            (2 + 2) / 4]                                                                                [Stage 651:>                                                        (0 + 3) / 3]                                                                                [Stage 655:>                (0 + 8) / 8][Stage 657:>                (0 + 0) / 4][Stage 655:========>        (4 + 4) / 8][Stage 657:>                (0 + 4) / 4][Stage 655:============>    (6 + 2) / 8][Stage 657:>                (0 + 4) / 4][Stage 655:=================================================>       (7 + 1) / 8]                                                                                [Stage 661:>                                                        (0 + 8) / 8][Stage 661:=======>                                                 (1 + 7) / 8][Stage 661:===================================>                     (5 + 3) / 8][Stage 661:=================================================>       (7 + 1) / 8]                                                                                2026-03-26 12:58:26,095 | INFO | __main__ | Processing alert micro-batch batch_id=28 rows=5 warning_rows=0
+[Stage 672:>                                                        (0 + 4) / 4][Stage 672:============================>                            (2 + 2) / 4]                                                                                [Stage 676:>                                                        (0 + 4) / 4][Stage 676:============================>                            (2 + 2) / 4][Stage 676:==========================================>              (3 + 1) / 4]                                                                                [Stage 678:>                                                        (0 + 1) / 1]                                                                                [Stage 683:>                (0 + 4) / 4][Stage 684:>                (0 + 4) / 8][Stage 683:====>            (1 + 3) / 4][Stage 684:>                (0 + 5) / 8][Stage 684:>                                                        (0 + 8) / 8][Stage 684:==============>                                          (2 + 6) / 8][Stage 684:==========================================>              (6 + 2) / 8][Stage 684:=================================================>       (7 + 1) / 8]                                                                                [Stage 687:>                (0 + 8) / 8][Stage 688:>                (0 + 0) / 4][Stage 687:====>            (2 + 6) / 8][Stage 688:>                (0 + 2) / 4][Stage 687:======>          (3 + 5) / 8][Stage 688:====>            (1 + 3) / 4][Stage 687:==========>      (5 + 3) / 8][Stage 688:========>        (2 + 2) / 4][Stage 687:==========================================>              (6 + 2) / 8]                                                                                2026-03-26 12:58:41,209 | INFO | __main__ | Processing alert micro-batch batch_id=29 rows=10 warning_rows=0
+[Stage 699:>                                                        (0 + 4) / 4][Stage 699:==============>                                          (1 + 3) / 4][Stage 699:============================>                            (2 + 2) / 4]                                                                                [Stage 703:==============>                                          (1 + 3) / 4][Stage 703:==========================================>              (3 + 1) / 4]                                                                                [Stage 711:>                                                        (0 + 8) / 8][Stage 711:==============>                                          (2 + 6) / 8][Stage 711:==========================================>              (6 + 2) / 8]                                                                                [Stage 715:=======>                                                 (1 + 7) / 8][Stage 715:=====================>                                   (3 + 5) / 8]                                                                                2026-03-26 12:58:50,696 | INFO | __main__ | Processing alert micro-batch batch_id=30 rows=5 warning_rows=0
+[Stage 726:>                                                        (0 + 4) / 4]                                                                                [Stage 730:============================>                            (2 + 2) / 4]                                                                                [Stage 736:====>            (2 + 6) / 8][Stage 738:>                (0 + 2) / 4]                                                                                [Stage 741:==========>      (5 + 3) / 8][Stage 742:>                (0 + 4) / 4]                                                                                2026-03-26 12:58:56,969 | INFO | __main__ | Processing alert micro-batch batch_id=31 rows=5 warning_rows=0
+[Stage 753:>                                                        (0 + 4) / 4][Stage 753:==========================================>              (3 + 1) / 4]                                                                                [Stage 757:==========================================>              (3 + 1) / 4]                                                                                [Stage 765:============================>                            (4 + 4) / 8][Stage 765:=================================================>       (7 + 1) / 8]                                                                                [Stage 768:====>            (2 + 6) / 8][Stage 769:>                (0 + 2) / 4]                                                                                2026-03-26 12:59:03,096 | INFO | __main__ | Processing alert micro-batch batch_id=32 rows=9 warning_rows=0
+[Stage 780:>                                                        (0 + 4) / 4][Stage 780:============================>                            (2 + 2) / 4]                                                                                [Stage 784:============================>                            (2 + 2) / 4]                                                                                2026-03-26 12:59:12,718 | INFO | __main__ | Processing alert micro-batch batch_id=33 rows=5 warning_rows=0
+[Stage 807:>                                                        (0 + 4) / 4][Stage 807:==========================================>              (3 + 1) / 4]                                                                                [Stage 811:============================>                            (2 + 2) / 4]                                                                                2026-03-26 12:59:22,789 | INFO | __main__ | Processing alert micro-batch batch_id=34 rows=5 warning_rows=0
+[Stage 834:>                                                        (0 + 4) / 4]                                                                                [Stage 838:============================>                            (2 + 2) / 4]                                                                                [Stage 846:==============>                                          (2 + 6) / 8][Stage 846:===================================>                     (5 + 3) / 8]                                                                                [Stage 850:==============>                                          (2 + 6) / 8][Stage 850:=================================================>       (7 + 1) / 8]                                                                                2026-03-26 12:59:34,242 | INFO | __main__ | Processing alert micro-batch batch_id=35 rows=8 warning_rows=0
+[Stage 861:>                                                        (0 + 4) / 4]                                                                                [Stage 865:============================>                            (2 + 2) / 4]                                                                                [Stage 871:====>            (2 + 6) / 8][Stage 873:>                (0 + 2) / 4][Stage 871:============>    (6 + 2) / 8][Stage 873:>                (0 + 4) / 4][Stage 873:==========================================>              (3 + 1) / 4]                                                                                [Stage 876:==========>      (5 + 3) / 8][Stage 877:>                (0 + 4) / 4]                                                                                2026-03-26 12:59:43,384 | INFO | __main__ | Processing alert micro-batch batch_id=36 rows=5 warning_rows=0
+[Stage 888:>                                                        (0 + 4) / 4][Stage 888:============================>                            (2 + 2) / 4]                                                                                [Stage 892:>                                                        (0 + 4) / 4][Stage 892:============================>                            (2 + 2) / 4]                                                                                [Stage 898:>                (0 + 8) / 8][Stage 900:>                (0 + 0) / 4][Stage 898:==>              (1 + 7) / 8][Stage 900:>                (0 + 1) / 4][Stage 898:========>        (4 + 4) / 8][Stage 900:====>            (1 + 3) / 4]                                                                                [Stage 904:============================>                            (4 + 4) / 8]                                                                                2026-03-26 12:59:54,305 | INFO | __main__ | Processing alert micro-batch batch_id=37 rows=5 warning_rows=0
+[Stage 915:>                                                        (0 + 4) / 4][Stage 915:==========================================>              (3 + 1) / 4]                                                                                [Stage 919:==========================================>              (3 + 1) / 4]                                                                                2026-03-26 13:00:02,414 | INFO | __main__ | Processing alert micro-batch batch_id=38 rows=9 warning_rows=0
+[Stage 942:>                                                        (0 + 4) / 4]                                                                                [Stage 946:============================>                            (2 + 2) / 4]                                                                                [Stage 958:===================================>                     (5 + 3) / 8]                                                                                2026-03-26 13:00:12,306 | INFO | __main__ | Processing alert micro-batch batch_id=39 rows=5 warning_rows=0
+[Stage 969:>                                                        (0 + 4) / 4][Stage 969:==============>                                          (1 + 3) / 4]                                                                                [Stage 973:============================>                            (2 + 2) / 4]                                                                                [Stage 979:======>          (3 + 5) / 8][Stage 981:>                (0 + 3) / 4][Stage 981:============================>                            (2 + 2) / 4]                                                                                [Stage 985:>                                                        (0 + 8) / 8][Stage 985:===================================>                     (5 + 3) / 8]                                                                                2026-03-26 13:00:23,318 | INFO | __main__ | Processing alert micro-batch batch_id=40 rows=5 warning_rows=0
+[Stage 996:>                                                        (0 + 4) / 4][Stage 996:============================>                            (2 + 2) / 4]                                                                                [Stage 1000:============================>                           (2 + 2) / 4][Stage 1000:==========================================>             (3 + 1) / 4]                                                                                [Stage 1008:>                                                       (0 + 4) / 4]                                                                                [Stage 1011:==============> (7 + 1) / 8][Stage 1012:>               (0 + 4) / 4]                                                                                2026-03-26 13:00:32,522 | INFO | __main__ | Processing alert micro-batch batch_id=41 rows=9 warning_rows=0
+[Stage 1023:>                                                       (0 + 4) / 4][Stage 1023:============================>                           (2 + 2) / 4]                                                                                [Stage 1027:============================>                           (2 + 2) / 4]                                                                                [Stage 1038:====>           (2 + 6) / 8][Stage 1039:>               (0 + 2) / 4][Stage 1038:============================>                           (4 + 4) / 8]                                                                                2026-03-26 13:00:42,918 | INFO | __main__ | Processing alert micro-batch batch_id=42 rows=5 warning_rows=0
+[Stage 1050:>                                                       (0 + 4) / 4]                                                                                [Stage 1054:============================>                           (2 + 2) / 4]                                                                                [Stage 1055:============================>                           (1 + 1) / 2]                                                                                [Stage 1062:>                                                       (0 + 8) / 8][Stage 1062:==============>                                         (2 + 6) / 8]                                                                                [Stage 1066:>                                                       (0 + 8) / 8][Stage 1066:==============>                                         (2 + 6) / 8][Stage 1066:===================================>                    (5 + 3) / 8]                                                                                2026-03-26 13:00:53,761 | INFO | __main__ | Processing alert micro-batch batch_id=43 rows=5 warning_rows=0
+[Stage 1077:>                                                       (0 + 4) / 4][Stage 1077:==============>                                         (1 + 3) / 4][Stage 1077:==========================================>             (3 + 1) / 4]                                                                                [Stage 1081:============================>                           (2 + 2) / 4]                                                                                [Stage 1092:========>       (4 + 4) / 8][Stage 1093:>               (0 + 4) / 4]                                                                                2026-03-26 13:01:02,764 | INFO | __main__ | Processing alert micro-batch batch_id=44 rows=9 warning_rows=0
+[Stage 1104:>                                                       (0 + 4) / 4][Stage 1104:============================>                           (2 + 2) / 4]                                                                                [Stage 1108:============================>                           (2 + 2) / 4]                                                                                2026-03-26 13:01:12,895 | INFO | __main__ | Processing alert micro-batch batch_id=45 rows=5 warning_rows=0
+[Stage 1131:==============>                                         (1 + 3) / 4]                                                                                [Stage 1135:============================>                           (2 + 2) / 4]                                                                                2026-03-26 13:01:22,360 | INFO | __main__ | Processing alert micro-batch batch_id=46 rows=5 warning_rows=0
+[Stage 1158:>                                                       (0 + 4) / 4][Stage 1158:============================>                           (2 + 2) / 4]                                                                                [Stage 1162:============================>                           (2 + 2) / 4]                                                                                [Stage 1170:=======>                                                (1 + 7) / 8][Stage 1170:============================>                           (4 + 4) / 8]                                                                                [Stage 1174:>                                                       (0 + 8) / 8][Stage 1174:==============>                                         (2 + 6) / 8][Stage 1174:=====================>                                  (3 + 5) / 8][Stage 1174:===================================>                    (5 + 3) / 8][Stage 1174:=================================================>      (7 + 1) / 8]                                                                                2026-03-26 13:01:34,284 | INFO | __main__ | Processing alert micro-batch batch_id=47 rows=9 warning_rows=0
+[Stage 1185:>                                                       (0 + 4) / 4][Stage 1185:==========================================>             (3 + 1) / 4]                                                                                [Stage 1189:============================>                           (2 + 2) / 4]                                                                                [Stage 1190:>                                                       (0 + 2) / 2][Stage 1191:>                                                       (0 + 1) / 1]                                                                                [Stage 1197:=====================>                                  (3 + 5) / 8]                                                                                [Stage 1200:========>       (4 + 4) / 8][Stage 1201:>               (0 + 4) / 4]                                                                                2026-03-26 13:01:43,538 | INFO | __main__ | Processing alert micro-batch batch_id=48 rows=5 warning_rows=0
+[Stage 1212:>                                                       (0 + 4) / 4][Stage 1212:==========================================>             (3 + 1) / 4]                                                                                [Stage 1216:==========================================>             (3 + 1) / 4]                                                                                [Stage 1224:==========================================>             (6 + 2) / 8]                                                                                [Stage 1228:=================================================>      (7 + 1) / 8]                                                                                2026-03-26 13:01:53,114 | INFO | __main__ | Processing alert micro-batch batch_id=49 rows=5 warning_rows=0
+[Stage 1239:>                                                       (0 + 4) / 4]                                                                                [Stage 1243:============================>                           (2 + 2) / 4]                                                                                2026-03-26 13:02:02,388 | INFO | __main__ | Processing alert micro-batch batch_id=50 rows=9 warning_rows=0
+[Stage 1266:>                                                       (0 + 4) / 4][Stage 1266:==========================================>             (3 + 1) / 4]                                                                                [Stage 1270:============================>                           (2 + 2) / 4]                                                                                [Stage 1278:>                                                       (0 + 8) / 8]                                                                                2026-03-26 13:02:12,998 | INFO | __main__ | Processing alert micro-batch batch_id=51 rows=5 warning_rows=0
+[Stage 1293:>                                                       (0 + 4) / 4]                                                                                [Stage 1297:============================>                           (2 + 2) / 4]                                                                                2026-03-26 13:02:22,619 | INFO | __main__ | Processing alert micro-batch batch_id=52 rows=5 warning_rows=0
+[Stage 1320:>                                                       (0 + 4) / 4][Stage 1320:==============>                                         (1 + 3) / 4]                                                                                [Stage 1324:==========================================>             (3 + 1) / 4]                                                                                [Stage 1332:>                                                       (0 + 4) / 4]                                                                                [Stage 1336:============================>                           (4 + 4) / 8]                                                                                2026-03-26 13:02:32,600 | INFO | __main__ | Processing alert micro-batch batch_id=53 rows=8 warning_rows=0
+[Stage 1347:>                                                       (0 + 4) / 4][Stage 1347:============================>                           (2 + 2) / 4]                                                                                [Stage 1351:==========================================>             (3 + 1) / 4]                                                                                [Stage 1362:==========>     (5 + 3) / 8][Stage 1363:>               (0 + 4) / 4]                                                                                2026-03-26 13:02:43,089 | INFO | __main__ | Processing alert micro-batch batch_id=54 rows=5 warning_rows=0
+[Stage 1374:>                                                       (0 + 4) / 4][Stage 1374:============================>                           (2 + 2) / 4]                                                                                [Stage 1378:==========================================>             (3 + 1) / 4]                                                                                [Stage 1384:==>             (1 + 7) / 8][Stage 1386:>               (0 + 2) / 4][Stage 1386:============================>                           (2 + 2) / 4]                                                                                [Stage 1390:>                                                       (0 + 8) / 8][Stage 1390:==============>                                         (2 + 6) / 8][Stage 1390:============================>                           (4 + 4) / 8][Stage 1390:===================================>                    (5 + 3) / 8]                                                                                2026-03-26 13:02:54,123 | INFO | __main__ | Processing alert micro-batch batch_id=55 rows=5 warning_rows=0
+[Stage 1401:>                                                       (0 + 4) / 4][Stage 1401:========================================================(4 + 0) / 4]                                                                                [Stage 1405:============================>                           (2 + 2) / 4]                                                                                [Stage 1411:==========>     (5 + 3) / 8][Stage 1413:>               (0 + 4) / 4][Stage 1413:==========================================>             (3 + 1) / 4]                                                                                [Stage 1417:>                                                       (0 + 8) / 8][Stage 1417:===================================>                    (5 + 3) / 8]                                                                                2026-03-26 13:03:03,339 | INFO | __main__ | Processing alert micro-batch batch_id=56 rows=9 warning_rows=0
+[Stage 1428:>                                                       (0 + 4) / 4][Stage 1428:==========================================>             (3 + 1) / 4]                                                                                [Stage 1432:==========================================>             (3 + 1) / 4]                                                                                [Stage 1440:==============>                                         (2 + 6) / 8]                                                                                [Stage 1443:>               (0 + 8) / 8][Stage 1444:>               (0 + 0) / 4][Stage 1443:======>         (3 + 5) / 8][Stage 1444:>               (0 + 3) / 4][Stage 1443:==========>     (5 + 3) / 8][Stage 1444:>               (0 + 4) / 4][Stage 1443:=================================================>      (7 + 1) / 8]                                                                                2026-03-26 13:03:14,407 | INFO | __main__ | Processing alert micro-batch batch_id=57 rows=5 warning_rows=0
+[Stage 1455:>                                                       (0 + 4) / 4]                                                                                [Stage 1459:============================>                           (2 + 2) / 4]                                                                                [Stage 1460:============================>                           (1 + 1) / 2]                                                                                [Stage 1465:>               (0 + 8) / 8][Stage 1467:>               (0 + 0) / 4][Stage 1465:==========>     (5 + 3) / 8][Stage 1467:>               (0 + 4) / 4]                                                                                [Stage 1470:>               (0 + 8) / 8][Stage 1471:>               (0 + 0) / 4][Stage 1470:============>   (6 + 2) / 8][Stage 1471:>               (0 + 4) / 4]                                                                                2026-03-26 13:03:23,334 | INFO | __main__ | Processing alert micro-batch batch_id=58 rows=5 warning_rows=0
+[Stage 1482:>                                                       (0 + 4) / 4][Stage 1482:==============>                                         (1 + 3) / 4]                                                                                [Stage 1486:==============>                                         (1 + 3) / 4][Stage 1486:==========================================>             (3 + 1) / 4]                                                                                [Stage 1494:>                                                       (0 + 8) / 8][Stage 1494:=======>                                                (1 + 7) / 8][Stage 1494:===================================>                    (5 + 3) / 8]                                                                                [Stage 1497:==========>     (5 + 3) / 8][Stage 1498:>               (0 + 4) / 4]                                                                                2026-03-26 13:03:33,251 | INFO | __main__ | Processing alert micro-batch batch_id=59 rows=7 warning_rows=0
+[Stage 1509:>                                                       (0 + 4) / 4][Stage 1509:==========================================>             (3 + 1) / 4]                                                                                [Stage 1513:============================>                           (2 + 2) / 4][Stage 1513:==========================================>             (3 + 1) / 4]                                                                                [Stage 1521:=================================================>      (7 + 1) / 8]                                                                                [Stage 1524:============>   (6 + 2) / 8][Stage 1525:>               (0 + 4) / 4]                                                                                2026-03-26 13:03:42,840 | INFO | __main__ | Processing alert micro-batch batch_id=60 rows=5 warning_rows=0
+[Stage 1536:>                                                       (0 + 4) / 4][Stage 1536:==========================================>             (3 + 1) / 4]                                                                                [Stage 1540:============================>                           (2 + 2) / 4]                                                                                [Stage 1548:>                                                       (0 + 8) / 8][Stage 1548:=====================>                                  (3 + 5) / 8][Stage 1548:============================>                           (4 + 4) / 8][Stage 1548:=================================================>      (7 + 1) / 8]                                                                                [Stage 1552:=======>                                                (1 + 7) / 8][Stage 1552:===================================>                    (5 + 3) / 8]                                                                                2026-03-26 13:03:53,974 | INFO | __main__ | Processing alert micro-batch batch_id=61 rows=5 warning_rows=0
+[Stage 1563:>                                                       (0 + 4) / 4][Stage 1563:==========================================>             (3 + 1) / 4]                                                                                [Stage 1567:>                                                       (0 + 4) / 4][Stage 1567:============================>                           (2 + 2) / 4]                                                                                [Stage 1568:============================>                           (1 + 1) / 2]                                                                                [Stage 1575:==============>                                         (2 + 6) / 8][Stage 1575:=====================>                                  (3 + 5) / 8][Stage 1575:===================================>                    (5 + 3) / 8][Stage 1575:=================================================>      (7 + 1) / 8][Stage 1576:>                                                       (0 + 1) / 1]                                                                                [Stage 1578:==>             (1 + 7) / 8][Stage 1579:>               (0 + 1) / 4][Stage 1578:======>         (3 + 5) / 8][Stage 1579:>               (0 + 3) / 4][Stage 1578:========>       (4 + 4) / 8][Stage 1579:>               (0 + 4) / 4][Stage 1578:==========>     (5 + 3) / 8][Stage 1579:====>           (1 + 3) / 4]                                                                                2026-03-26 13:04:05,116 | INFO | __main__ | Processing alert micro-batch batch_id=62 rows=8 warning_rows=0
+[Stage 1590:>                                                       (0 + 4) / 4][Stage 1590:==============>                                         (1 + 3) / 4]                                                                                [Stage 1602:=======>                                                (1 + 7) / 8][Stage 1602:==========================================>             (6 + 2) / 8]                                                                                [Stage 1606:============================>                           (4 + 4) / 8]                                                                                2026-03-26 13:04:12,932 | INFO | __main__ | Processing alert micro-batch batch_id=63 rows=5 warning_rows=0
+[Stage 1617:>                                                       (0 + 4) / 4]                                                                                [Stage 1621:============================>                           (2 + 2) / 4]                                                                                [Stage 1629:=======>                                                (1 + 7) / 8][Stage 1629:============================>                           (4 + 4) / 8]                                                                                [Stage 1632:====>           (2 + 6) / 8][Stage 1633:>               (0 + 2) / 4][Stage 1633:==========================================>             (3 + 1) / 4]                                                                                2026-03-26 13:04:23,316 | INFO | __main__ | Processing alert micro-batch batch_id=64 rows=5 warning_rows=0
+[Stage 1644:>                                                       (0 + 4) / 4]                                                                                [Stage 1648:==============>                                         (1 + 3) / 4][Stage 1648:============================>                           (2 + 2) / 4]                                                                                [Stage 1656:==========================================>             (6 + 2) / 8]                                                                                [Stage 1659:>               (0 + 8) / 8][Stage 1660:>               (0 + 0) / 4][Stage 1659:========>       (4 + 4) / 8][Stage 1660:>               (0 + 4) / 4]                                                                                2026-03-26 13:04:33,498 | INFO | __main__ | Processing alert micro-batch batch_id=65 rows=8 warning_rows=0
+[Stage 1671:>                                                       (0 + 4) / 4]                                                                                [Stage 1675:==========================================>             (3 + 1) / 4]                                                                                [Stage 1681:======>         (3 + 5) / 8][Stage 1683:>               (0 + 3) / 4]                                                                                [Stage 1686:========>       (4 + 4) / 8][Stage 1687:>               (0 + 4) / 4][Stage 1686:=================================================>      (7 + 1) / 8]                                                                                2026-03-26 13:04:42,753 | INFO | __main__ | Processing alert micro-batch batch_id=66 rows=5 warning_rows=0
+[Stage 1698:>                                                       (0 + 4) / 4]                                                                                [Stage 1702:==========================================>             (3 + 1) / 4]                                                                                [Stage 1703:============================>                           (1 + 1) / 2]                                                                                [Stage 1708:>               (0 + 8) / 8][Stage 1710:>               (0 + 0) / 4][Stage 1708:==>             (1 + 7) / 8][Stage 1710:>               (0 + 1) / 4][Stage 1708:==========>     (5 + 3) / 8][Stage 1710:====>           (1 + 3) / 4]                                                                                [Stage 1714:==============>                                         (2 + 6) / 8][Stage 1714:===================================>                    (5 + 3) / 8]                                                                                2026-03-26 13:04:53,959 | INFO | __main__ | Processing alert micro-batch batch_id=67 rows=5 warning_rows=0
+[Stage 1725:>                                                       (0 + 4) / 4][Stage 1725:============================>                           (2 + 2) / 4]                                                                                [Stage 1729:==========================================>             (3 + 1) / 4]                                                                                [Stage 1737:============================>                           (4 + 4) / 8][Stage 1737:===================================>                    (5 + 3) / 8]                                                                                [Stage 1740:>               (0 + 8) / 8][Stage 1741:>               (0 + 0) / 4][Stage 1741:============================>                           (2 + 2) / 4]                                                                                2026-03-26 13:05:03,317 | INFO | __main__ | Processing alert micro-batch batch_id=68 rows=8 warning_rows=0
+[Stage 1752:>                                                       (0 + 4) / 4]                                                                                [Stage 1756:==============>                                         (1 + 3) / 4][Stage 1756:============================>                           (2 + 2) / 4]                                                                                [Stage 1767:>               (0 + 8) / 8][Stage 1768:>               (0 + 0) / 4][Stage 1767:==============> (7 + 1) / 8][Stage 1768:>               (0 + 4) / 4]                                                                                2026-03-26 13:05:12,846 | INFO | __main__ | Processing alert micro-batch batch_id=69 rows=5 warning_rows=0
+[Stage 1779:>                                                       (0 + 4) / 4]                                                                                [Stage 1783:==========================================>             (3 + 1) / 4]                                                                                [Stage 1791:>                                                       (0 + 8) / 8][Stage 1791:============================>                           (4 + 4) / 8][Stage 1791:=================================================>      (7 + 1) / 8]                                                                                [Stage 1794:>               (0 + 8) / 8][Stage 1795:>               (0 + 0) / 4][Stage 1794:========>       (4 + 4) / 8][Stage 1795:====>           (1 + 3) / 4]                                                                                2026-03-26 13:05:23,396 | INFO | __main__ | Processing alert micro-batch batch_id=70 rows=5 warning_rows=0
+[Stage 1806:>                                                       (0 + 4) / 4]                                                                                [Stage 1810:==========================================>             (3 + 1) / 4]                                                                                2026-03-26 13:05:32,713 | INFO | __main__ | Processing alert micro-batch batch_id=71 rows=8 warning_rows=0
+[Stage 1833:>                                                       (0 + 4) / 4]                                                                                [Stage 1837:============================>                           (2 + 2) / 4]                                                                                [Stage 1843:============>   (6 + 2) / 8][Stage 1845:>               (0 + 4) / 4]                                                                                [Stage 1849:=====================>                                  (3 + 5) / 8]                                                                                2026-03-26 13:05:42,691 | INFO | __main__ | Processing alert micro-batch batch_id=72 rows=5 warning_rows=0
+[Stage 1860:>                                                       (0 + 4) / 4]                                                                                [Stage 1864:============================>                           (2 + 2) / 4]                                                                                [Stage 1870:>                                                       (0 + 8) / 8][Stage 1870:=================================================>      (7 + 1) / 8]                                                                                [Stage 1876:>                                                       (0 + 8) / 8][Stage 1876:=====================>                                  (3 + 5) / 8]                                                                                2026-03-26 13:05:53,542 | INFO | __main__ | Processing alert micro-batch batch_id=73 rows=5 warning_rows=0
+[Stage 1887:>                                                       (0 + 4) / 4]                                                                                [Stage 1891:==========================================>             (3 + 1) / 4]                                                                                [Stage 1897:==============> (7 + 1) / 8][Stage 1899:============>   (3 + 1) / 4]                                                                                2026-03-26 13:06:02,695 | INFO | __main__ | Processing alert micro-batch batch_id=74 rows=8 warning_rows=0
+[Stage 1914:>                                                       (0 + 4) / 4][Stage 1914:============================>                           (2 + 2) / 4]                                                                                [Stage 1918:==========================================>             (3 + 1) / 4]                                                                                [Stage 1930:==========================================>             (6 + 2) / 8]                                                                                2026-03-26 13:06:12,286 | INFO | __main__ | Processing alert micro-batch batch_id=75 rows=5 warning_rows=0
+[Stage 1941:>                                                       (0 + 4) / 4]                                                                                [Stage 1945:============================>                           (2 + 2) / 4]                                                                                2026-03-26 13:06:21,949 | INFO | __main__ | Processing alert micro-batch batch_id=76 rows=5 warning_rows=0
+[Stage 1968:>                                                       (0 + 4) / 4][Stage 1968:==========================================>             (3 + 1) / 4]                                                                                [Stage 1972:============================>                           (2 + 2) / 4]                                                                                2026-03-26 13:06:32,615 | INFO | __main__ | Processing alert micro-batch batch_id=77 rows=8 warning_rows=0
+[Stage 1995:>                                                       (0 + 4) / 4][Stage 1995:============================>                           (2 + 2) / 4]                                                                                [Stage 1999:============================>                           (2 + 2) / 4]                                                                                2026-03-26 13:06:42,446 | INFO | __main__ | Processing alert micro-batch batch_id=78 rows=5 warning_rows=0
+[Stage 2022:>                                                       (0 + 4) / 4][Stage 2022:==========================================>             (3 + 1) / 4]                                                                                [Stage 2026:============================>                           (2 + 2) / 4]                                                                                [Stage 2038:============================>                           (4 + 4) / 8][Stage 2038:==========================================>             (6 + 2) / 8]                                                                                2026-03-26 13:06:53,344 | INFO | __main__ | Processing alert micro-batch batch_id=79 rows=5 warning_rows=0
+[Stage 2049:>                                                       (0 + 4) / 4]                                                                                [Stage 2053:>                                                       (0 + 4) / 4][Stage 2053:============================>                           (2 + 2) / 4]                                                                                [Stage 2064:======>         (3 + 5) / 8][Stage 2065:>               (0 + 4) / 4]                                                                                2026-03-26 13:07:02,771 | INFO | __main__ | Processing alert micro-batch batch_id=80 rows=8 warning_rows=0
+[Stage 2076:>                                                       (0 + 4) / 4][Stage 2076:==========================================>             (3 + 1) / 4]                                                                                [Stage 2080:==========================================>             (3 + 1) / 4]                                                                                [Stage 2088:>                                                       (0 + 8) / 8][Stage 2088:=======>                                                (1 + 7) / 8][Stage 2088:============================>                           (4 + 4) / 8][Stage 2088:=================================================>      (7 + 1) / 8]                                                                                [Stage 2091:>               (0 + 8) / 8][Stage 2092:>               (0 + 0) / 4][Stage 2091:==============> (7 + 1) / 8][Stage 2092:>               (0 + 4) / 4]                                                                                2026-03-26 13:07:13,726 | INFO | __main__ | Processing alert micro-batch batch_id=81 rows=5 warning_rows=0
+[Stage 2103:>                                                       (0 + 4) / 4][Stage 2103:==============>                                         (1 + 3) / 4]                                                                                [Stage 2107:==========================================>             (3 + 1) / 4]                                                                                [Stage 2108:>                                                       (0 + 2) / 2][Stage 2108:============================>                           (1 + 1) / 2]                                                                                [Stage 2115:==============>                                         (1 + 3) / 4]                                                                                2026-03-26 13:07:23,040 | INFO | __main__ | Processing alert micro-batch batch_id=82 rows=5 warning_rows=0
+[Stage 2130:>                                                       (0 + 4) / 4]                                                                                [Stage 2134:============================>                           (2 + 2) / 4][Stage 2134:==========================================>             (3 + 1) / 4]                                                                                [Stage 2140:>               (0 + 8) / 8][Stage 2142:>               (0 + 0) / 4][Stage 2140:====>           (2 + 6) / 8][Stage 2142:>               (0 + 2) / 4][Stage 2140:========>       (4 + 4) / 8][Stage 2142:>               (0 + 4) / 4]                                                                                [Stage 2146:>                                                       (0 + 8) / 8][Stage 2146:=====================>                                  (3 + 5) / 8][Stage 2146:============================>                           (4 + 4) / 8]                                                                                2026-03-26 13:07:34,521 | INFO | __main__ | Processing alert micro-batch batch_id=83 rows=8 warning_rows=0
+[Stage 2157:>                                                       (0 + 4) / 4][Stage 2157:==========================================>             (3 + 1) / 4]                                                                                [Stage 2161:==========================================>             (3 + 1) / 4]                                                                                [Stage 2169:=================================================>      (7 + 1) / 8]                                                                                [Stage 2172:========>       (4 + 4) / 8][Stage 2173:>               (0 + 4) / 4]                                                                                2026-03-26 13:07:42,932 | INFO | __main__ | Processing alert micro-batch batch_id=84 rows=5 warning_rows=0
+[Stage 2184:>                                                       (0 + 4) / 4]                                                                                [Stage 2188:==============>                                         (1 + 3) / 4][Stage 2188:==========================================>             (3 + 1) / 4]                                                                                [Stage 2189:============================>                           (1 + 1) / 2][Stage 2190:>                                                       (0 + 1) / 1]                                                                                [Stage 2194:====>           (2 + 6) / 8][Stage 2196:>               (0 + 2) / 4][Stage 2194:==========>     (5 + 3) / 8][Stage 2196:>               (0 + 4) / 4]                                                                                [Stage 2200:=================================================>      (7 + 1) / 8]                                                                                2026-03-26 13:07:55,332 | INFO | __main__ | Processing alert micro-batch batch_id=85 rows=5 warning_rows=0
+[Stage 2211:>                                                       (0 + 4) / 4][Stage 2211:============================>                           (2 + 2) / 4]                                                                                [Stage 2215:==========================================>             (3 + 1) / 4]                                                                                [Stage 2227:==============>                                         (2 + 6) / 8]                                                                                2026-03-26 13:08:02,666 | INFO | __main__ | Processing alert micro-batch batch_id=86 rows=8 warning_rows=0
+[Stage 2238:>                                                       (0 + 4) / 4][Stage 2238:==========================================>             (3 + 1) / 4]                                                                                [Stage 2242:============================>                           (2 + 2) / 4]                                                                                [Stage 2248:========>       (4 + 4) / 8][Stage 2250:>               (0 + 4) / 4][Stage 2248:========>       (4 + 4) / 8][Stage 2250:========>       (2 + 2) / 4]                                                                                [Stage 2254:=====================>                                  (3 + 5) / 8][Stage 2254:=================================================>      (7 + 1) / 8]                                                                                2026-03-26 13:08:13,364 | INFO | __main__ | Processing alert micro-batch batch_id=87 rows=5 warning_rows=0
+[Stage 2265:>                                                       (0 + 4) / 4][Stage 2265:==============>                                         (1 + 3) / 4]                                                                                [Stage 2269:============================>                           (2 + 2) / 4]                                                                                [Stage 2275:==========>     (5 + 3) / 8][Stage 2277:========>       (2 + 2) / 4][Stage 2278:>                                                       (0 + 1) / 1]                                                                                2026-03-26 13:08:23,257 | INFO | __main__ | Processing alert micro-batch batch_id=88 rows=5 warning_rows=0
+[Stage 2292:>                                                       (0 + 4) / 4]                                                                                [Stage 2296:============================>                           (2 + 2) / 4]                                                                                2026-03-26 13:08:32,506 | INFO | __main__ | Processing alert micro-batch batch_id=89 rows=7 warning_rows=0
+[Stage 2319:>                                                       (0 + 4) / 4][Stage 2319:==========================================>             (3 + 1) / 4]                                                                                [Stage 2323:============================>                           (2 + 2) / 4]                                                                                2026-03-26 13:08:42,292 | INFO | __main__ | Processing alert micro-batch batch_id=90 rows=5 warning_rows=0
+[Stage 2346:>                                                       (0 + 4) / 4][Stage 2346:============================>                           (2 + 2) / 4]                                                                                [Stage 2350:==========================================>             (3 + 1) / 4]                                                                                

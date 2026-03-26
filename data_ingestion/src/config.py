@@ -4,6 +4,7 @@ import logging
 import time
 from functools import lru_cache
 from pathlib import Path
+from typing import Any
 
 from pydantic import Field, field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
@@ -74,6 +75,7 @@ class Settings(BaseSettings):
         gt=0, validation_alias="BINANCE_WS_PING_TIMEOUT_SECONDS"
     )
     price_log_interval: int = Field(gt=0, validation_alias="PRICE_LOG_INTERVAL")
+    binance_tracked_symbols: str = Field(validation_alias="BINANCE_TRACKED_SYMBOLS")
 
     cryptopanic_api_key: str = Field(validation_alias="CRYPTOPANIC_API_KEY")
     cryptopanic_base_url: str = Field(validation_alias="CRYPTOPANIC_BASE_URL")
@@ -83,6 +85,21 @@ class Settings(BaseSettings):
     )
     cryptopanic_page_size: int = Field(
         gt=0, validation_alias="CRYPTOPANIC_PAGE_SIZE"
+    )
+    cryptopanic_backoff_base_seconds: int = Field(
+        gt=0, validation_alias="CRYPTOPANIC_BACKOFF_BASE_SECONDS"
+    )
+    cryptopanic_backoff_max_seconds: int = Field(
+        gt=0, validation_alias="CRYPTOPANIC_BACKOFF_MAX_SECONDS"
+    )
+    cryptopanic_rss_fallback_enabled: bool = Field(
+        validation_alias="CRYPTOPANIC_RSS_FALLBACK_ENABLED"
+    )
+    cryptopanic_rss_fallback_urls: str = Field(
+        validation_alias="CRYPTOPANIC_RSS_FALLBACK_URLS"
+    )
+    cryptopanic_rss_fallback_page_size: int = Field(
+        gt=0, validation_alias="CRYPTOPANIC_RSS_FALLBACK_PAGE_SIZE"
     )
     http_timeout_seconds: int = Field(gt=0, validation_alias="HTTP_TIMEOUT_SECONDS")
 
@@ -94,9 +111,11 @@ class Settings(BaseSettings):
         "kafka_topic_raw_news",
         "kafka_client_id",
         "binance_ws_url",
+        "binance_tracked_symbols",
         "cryptopanic_api_key",
         "cryptopanic_base_url",
         "cryptopanic_filter_kind",
+        "cryptopanic_rss_fallback_urls",
         mode="before",
     )
     @classmethod
@@ -121,6 +140,22 @@ class Settings(BaseSettings):
             raise ValueError(f"Unsupported LOG_LEVEL: {value}")
 
         return normalized
+
+    @property
+    def tracked_symbols(self) -> set[str]:
+        return {
+            symbol.strip().upper()
+            for symbol in self.binance_tracked_symbols.split(",")
+            if symbol.strip()
+        }
+
+    @property
+    def cryptopanic_rss_urls(self) -> list[str]:
+        return [
+            url.strip()
+            for url in self.cryptopanic_rss_fallback_urls.split(",")
+            if url.strip()
+        ]
 
     @property
     def kafka_bootstrap_servers(self) -> list[str]:

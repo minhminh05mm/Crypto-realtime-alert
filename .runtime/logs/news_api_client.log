@@ -267,3 +267,1472 @@ requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: http
 2026-03-21 16:44:41,472 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
 2026-03-21 16:44:41,473 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
 2026-03-21 16:44:41,473 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+
+[2026-03-23T08:22:26.860759+00:00] starting news_api_client with module src.news_api_client
+2026-03-23 08:22:27,674 | INFO | src.kafka_utils | Initialized Kafka producer for broker=localhost:9092 client_id=crypto-realtime-alert-data-ingestion
+2026-03-23 08:22:28,534 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 08:23:30,565 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 08:24:32,589 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 08:25:34,756 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 08:26:36,766 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 08:27:38,813 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 08:28:40,817 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 08:29:42,872 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 08:30:44,895 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 08:31:46,937 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 08:32:48,983 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 08:33:51,004 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 08:34:53,112 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 08:35:55,151 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 08:36:57,222 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 08:37:59,254 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 08:39:01,350 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 08:40:03,395 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 08:41:05,684 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 08:42:07,731 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 08:43:09,813 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 08:44:11,850 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 08:44:39,773 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: Socket EVENT_READ without in-flight-requests
+2026-03-23 08:44:39,773 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 08:44:39,776 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Error receiving network data closing socket
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/kafka/conn.py", line 1171, in _recv
+    data = self._sock.recv(self.config['sock_chunk_bytes'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [Errno 104] Connection reset by peer
+2026-03-23 08:44:39,778 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: [Errno 104] Connection reset by peer
+2026-03-23 08:44:39,779 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 08:44:39,880 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Error receiving network data closing socket
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/kafka/conn.py", line 1171, in _recv
+    data = self._sock.recv(self.config['sock_chunk_bytes'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [Errno 104] Connection reset by peer
+2026-03-23 08:44:39,881 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: [Errno 104] Connection reset by peer
+2026-03-23 08:44:39,881 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 08:44:39,982 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2026-03-23 08:44:39,983 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2026-03-23 08:44:39,983 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 08:44:40,086 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Error receiving network data closing socket
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/kafka/conn.py", line 1171, in _recv
+    data = self._sock.recv(self.config['sock_chunk_bytes'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [Errno 104] Connection reset by peer
+2026-03-23 08:44:40,086 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: [Errno 104] Connection reset by peer
+2026-03-23 08:44:40,087 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 08:44:40,190 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Error receiving network data closing socket
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/kafka/conn.py", line 1171, in _recv
+    data = self._sock.recv(self.config['sock_chunk_bytes'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [Errno 104] Connection reset by peer
+2026-03-23 08:44:40,190 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: [Errno 104] Connection reset by peer
+2026-03-23 08:44:40,191 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 08:44:40,293 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2026-03-23 08:44:40,293 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2026-03-23 08:44:40,294 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 08:44:40,396 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: socket disconnected
+2026-03-23 08:44:40,396 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2026-03-23 08:44:40,397 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 08:44:40,499 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Error receiving network data closing socket
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/kafka/conn.py", line 1171, in _recv
+    data = self._sock.recv(self.config['sock_chunk_bytes'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [Errno 104] Connection reset by peer
+2026-03-23 08:44:40,501 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: [Errno 104] Connection reset by peer
+2026-03-23 08:44:40,501 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 08:44:40,603 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Error receiving network data closing socket
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/kafka/conn.py", line 1171, in _recv
+    data = self._sock.recv(self.config['sock_chunk_bytes'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [Errno 104] Connection reset by peer
+2026-03-23 08:44:40,604 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: [Errno 104] Connection reset by peer
+2026-03-23 08:44:40,605 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 08:44:40,707 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Error receiving network data closing socket
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/kafka/conn.py", line 1171, in _recv
+    data = self._sock.recv(self.config['sock_chunk_bytes'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [Errno 104] Connection reset by peer
+2026-03-23 08:44:40,708 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: [Errno 104] Connection reset by peer
+2026-03-23 08:44:40,708 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 08:44:40,811 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Error receiving network data closing socket
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/kafka/conn.py", line 1171, in _recv
+    data = self._sock.recv(self.config['sock_chunk_bytes'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [Errno 104] Connection reset by peer
+2026-03-23 08:44:40,811 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: [Errno 104] Connection reset by peer
+2026-03-23 08:44:40,812 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 08:44:40,914 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Error receiving network data closing socket
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/kafka/conn.py", line 1171, in _recv
+    data = self._sock.recv(self.config['sock_chunk_bytes'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [Errno 104] Connection reset by peer
+2026-03-23 08:44:40,915 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: [Errno 104] Connection reset by peer
+2026-03-23 08:44:40,915 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 08:44:41,143 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Error receiving network data closing socket
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/kafka/conn.py", line 1171, in _recv
+    data = self._sock.recv(self.config['sock_chunk_bytes'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [Errno 104] Connection reset by peer
+2026-03-23 08:44:41,145 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: [Errno 104] Connection reset by peer
+2026-03-23 08:44:41,145 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 08:44:41,247 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 08:44:41,247 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 08:44:41,248 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 08:44:41,351 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 08:44:41,351 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 08:44:41,352 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 08:44:41,579 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 08:44:41,580 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 08:44:41,580 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 08:44:41,921 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 08:44:41,921 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 08:44:41,922 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 08:44:42,667 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 08:44:42,668 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 08:44:42,669 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 08:44:44,103 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 08:44:44,104 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 08:44:44,104 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 08:44:47,703 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 08:44:47,704 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 08:44:47,704 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 08:44:52,840 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 08:44:52,841 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 08:44:52,841 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 08:45:06,969 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 08:45:06,969 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 08:45:06,970 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 08:45:13,802 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 09:19:06,919 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:19:06,919 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:19:06,920 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:19:39,911 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:19:39,912 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:19:39,912 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:19:47,571 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/http/client.py", line 1448, in getresponse
+    response.begin()
+  File "/usr/lib/python3.12/http/client.py", line 336, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/http/client.py", line 305, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/adapters.py", line 644, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/urllib3/util/retry.py", line 490, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/urllib3/util/util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/http/client.py", line 1448, in getresponse
+    response.begin()
+  File "/usr/lib/python3.12/http/client.py", line 336, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/http/client.py", line 305, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 64, in _poll_once
+    response = self.session.get(
+               ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/adapters.py", line 659, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-03-23 09:20:14,253 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:20:14,253 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:20:14,254 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:20:42,494 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:20:42,495 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:20:42,495 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:20:48,129 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 796, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 975, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+               ^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/urllib3/util/ssl_.py", line 483, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/urllib3/util/ssl_.py", line 527, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/ssl.py", line 455, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/ssl.py", line 1042, in _create
+    self.do_handshake()
+  File "/usr/lib/python3.12/ssl.py", line 1320, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+urllib3.exceptions.SSLError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/adapters.py", line 644, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/urllib3/util/retry.py", line 535, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='cryptopanic.com', port=443): Max retries exceeded with url: /api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 64, in _poll_once
+    response = self.session.get(
+               ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/adapters.py", line 675, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='cryptopanic.com', port=443): Max retries exceeded with url: /api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)')))
+2026-03-23 09:21:16,356 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:21:16,357 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:21:16,357 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:21:51,269 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:21:51,270 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:21:51,270 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:22:03,639 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 796, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 975, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+               ^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/urllib3/util/ssl_.py", line 483, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/urllib3/util/ssl_.py", line 527, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/ssl.py", line 455, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/ssl.py", line 1042, in _create
+    self.do_handshake()
+  File "/usr/lib/python3.12/ssl.py", line 1320, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+urllib3.exceptions.SSLError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/adapters.py", line 644, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/urllib3/util/retry.py", line 535, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='cryptopanic.com', port=443): Max retries exceeded with url: /api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 64, in _poll_once
+    response = self.session.get(
+               ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/adapters.py", line 675, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='cryptopanic.com', port=443): Max retries exceeded with url: /api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)')))
+2026-03-23 09:22:17,831 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:22:17,831 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:22:17,831 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:22:53,348 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:22:53,348 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:22:53,348 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:23:05,024 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 796, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 975, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+               ^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/urllib3/util/ssl_.py", line 483, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/urllib3/util/ssl_.py", line 527, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/ssl.py", line 455, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/ssl.py", line 1042, in _create
+    self.do_handshake()
+  File "/usr/lib/python3.12/ssl.py", line 1320, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+urllib3.exceptions.SSLError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/adapters.py", line 644, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/urllib3/util/retry.py", line 535, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='cryptopanic.com', port=443): Max retries exceeded with url: /api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 64, in _poll_once
+    response = self.session.get(
+               ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/adapters.py", line 675, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='cryptopanic.com', port=443): Max retries exceeded with url: /api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)')))
+2026-03-23 09:23:19,988 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:23:19,988 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:23:19,989 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:23:53,562 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:23:53,562 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:23:53,562 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:24:06,454 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 09:24:21,527 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:24:21,528 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:24:21,528 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:24:51,369 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:24:51,370 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:24:51,370 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:25:07,004 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 09:25:15,940 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:25:15,941 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:25:15,941 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:25:48,402 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:25:48,403 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:25:48,403 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:26:07,788 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 09:26:22,661 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:26:22,662 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:26:22,662 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:26:58,666 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:26:58,667 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:26:58,667 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:27:08,557 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 09:27:31,949 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:27:31,949 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:27:31,949 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:28:00,629 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:28:00,629 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:28:00,630 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:28:10,006 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 09:28:26,107 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:28:26,107 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:28:26,107 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:29:00,485 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:29:00,486 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:29:00,486 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:29:10,753 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 09:29:32,482 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:29:32,482 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:29:32,482 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:30:01,585 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:30:01,585 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:30:01,586 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:30:12,061 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 09:30:35,801 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:30:35,801 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:30:35,802 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:31:08,597 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:31:08,597 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:31:08,597 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:31:12,954 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 09:31:45,007 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:31:45,007 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:31:45,008 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:32:14,416 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 09:32:16,300 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:32:16,300 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:32:16,300 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:32:47,482 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:32:47,483 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:32:47,483 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:33:15,807 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 09:33:22,001 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:33:22,001 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:33:22,001 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:33:47,568 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:33:47,568 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:33:47,569 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:34:14,644 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:34:14,644 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:34:14,644 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:34:17,281 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 09:34:48,917 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:34:48,917 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:34:48,917 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:35:18,738 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 09:35:23,100 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:35:23,100 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:35:23,100 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:35:51,488 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:35:51,488 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:35:51,489 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:36:18,312 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:36:18,313 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:36:18,313 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:36:20,294 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 09:36:50,629 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:36:50,629 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:36:50,629 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:37:16,906 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:37:16,907 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:37:16,907 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:37:22,113 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 09:37:45,768 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:37:45,768 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:37:45,768 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:38:20,066 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:38:20,067 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:38:20,067 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:38:23,838 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 09:38:50,501 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:38:50,502 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:38:50,502 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:39:21,647 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:39:21,648 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:39:21,648 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:39:25,679 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 09:39:57,774 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:39:57,774 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:39:57,775 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:40:26,897 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:40:26,898 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:40:26,898 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:40:27,479 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 09:40:52,602 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:40:52,602 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:40:52,602 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:41:27,729 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:41:27,730 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:41:27,730 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:41:29,286 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 09:41:57,918 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:41:57,918 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:41:57,918 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:42:27,485 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:42:27,486 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:42:27,486 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:42:46,593 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/http/client.py", line 1448, in getresponse
+    response.begin()
+  File "/usr/lib/python3.12/http/client.py", line 336, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/http/client.py", line 297, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socket.py", line 707, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/ssl.py", line 1252, in recv_into
+    return self.read(nbytes, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/ssl.py", line 1104, in read
+    return self._sslobj.read(len, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/adapters.py", line 644, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/urllib3/util/retry.py", line 490, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 536, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 367, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='cryptopanic.com', port=443): Read timed out. (read timeout=15)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 64, in _poll_once
+    response = self.session.get(
+               ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/adapters.py", line 690, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='cryptopanic.com', port=443): Read timed out. (read timeout=15)
+2026-03-23 09:42:59,935 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:42:59,936 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:42:59,936 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:43:26,893 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:43:26,894 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:43:26,894 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:43:48,838 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 502 Server Error: Bad Gateway for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 09:43:53,968 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:43:53,969 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:43:53,969 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:44:24,159 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:44:24,159 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:44:24,159 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:44:50,662 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 09:44:51,964 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:44:51,964 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:44:51,964 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:45:23,721 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:45:23,722 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:45:23,722 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:45:52,136 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:45:52,136 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:45:52,136 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:45:52,589 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 09:46:28,697 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:46:28,697 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:46:28,697 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:46:54,434 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 09:47:02,190 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:47:02,190 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:47:02,190 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:47:30,853 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:47:30,853 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:47:30,853 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:47:56,369 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 09:48:00,259 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:48:00,259 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:48:00,259 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:48:26,525 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:48:26,525 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:48:26,526 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:48:56,773 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:48:56,773 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:48:56,774 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:48:58,372 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 09:49:22,526 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:49:22,527 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:49:22,527 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:49:56,834 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:49:56,834 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:49:56,834 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:50:00,380 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 09:50:25,460 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:50:25,460 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:50:25,460 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:50:56,601 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:50:56,603 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:50:56,604 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:51:02,304 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 09:51:31,475 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:51:31,476 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:51:31,476 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:52:01,197 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:52:01,198 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:52:01,199 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:52:04,259 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 09:52:27,885 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:52:27,885 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:52:27,886 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:53:01,411 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:53:01,412 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:53:01,413 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:53:06,330 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 09:53:30,462 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:53:30,463 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:53:30,463 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:54:06,147 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:54:06,148 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:54:06,148 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:54:08,378 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 09:54:37,866 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:54:37,866 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:54:37,866 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:55:10,350 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 09:55:12,466 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:55:12,466 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:55:12,466 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:55:40,567 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:55:40,569 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:55:40,569 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:56:12,372 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 09:56:14,859 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:56:14,860 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:56:14,860 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:56:51,050 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:56:51,052 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:56:51,052 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:57:14,553 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 09:57:24,542 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:57:24,542 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:57:24,542 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:57:49,988 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:57:49,989 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:57:49,989 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:58:16,650 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 09:58:19,367 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:58:19,367 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:58:19,367 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:58:54,319 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:58:54,319 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:58:54,319 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:59:18,884 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 09:59:30,011 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:59:30,011 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:59:30,012 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 09:59:56,085 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 09:59:56,085 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 09:59:56,086 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 10:00:20,942 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 10:00:24,520 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 10:00:24,520 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 10:00:24,520 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 10:00:57,662 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 10:00:57,663 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 10:00:57,663 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 10:01:23,060 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 10:01:23,567 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 10:01:23,567 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 10:01:23,567 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 10:01:58,393 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 10:01:58,395 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 10:01:58,395 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 10:02:25,153 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 10:02:32,221 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 10:02:32,221 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 10:02:32,222 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 10:02:59,232 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 10:02:59,233 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 10:02:59,233 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 10:03:27,335 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 10:03:29,052 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 10:03:29,052 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 10:03:29,052 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 10:04:03,364 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 10:04:03,364 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 10:04:03,364 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 10:04:29,412 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 10:04:37,643 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 10:04:37,643 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 10:04:37,643 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 10:05:08,448 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 10:05:08,448 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 10:05:08,449 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+2026-03-23 10:05:31,516 | ERROR | __main__ | Network error while polling CryptoPanic API.
+Traceback (most recent call last):
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 37, in run
+    fetched_count, published_count = self._poll_once()
+                                     ^^^^^^^^^^^^^^^^^
+  File "/home/minhminh05mm/crypto-realtime-alert/data_ingestion/src/news_api_client.py", line 72, in _poll_once
+    response.raise_for_status()
+  File "/home/minhminh05mm/crypto-realtime-alert/.venv/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://cryptopanic.com/api/developer/v2/posts/?auth_token=94c910ce1d310d704b2a255a87c3d842137e2656&kind=news
+2026-03-23 10:05:33,654 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2026-03-23 10:05:33,654 | ERROR | kafka.conn | <BrokerConnection client_id=crypto-realtime-alert-data-ingestion, node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2026-03-23 10:05:33,655 | WARNING | kafka.client | Node 1 connection failed -- refreshing metadata
+
+[2026-03-26T12:43:26.261093+00:00] starting news_api_client with module src.news_api_client
+2026-03-26 12:43:27,127 | INFO | src.kafka_utils | Initialized Kafka producer for broker=localhost:19092 client_id=crypto-realtime-alert-data-ingestion
+2026-03-26 12:43:27,732 | WARNING | __main__ | CryptoPanic returned 429. Falling back to RSS feeds for this poll.
+2026-03-26 12:43:31,798 | INFO | __main__ | RSS fallback poll completed fetched=55 published=20
+2026-03-26 12:43:31,798 | INFO | __main__ | CryptoPanic poll completed fetched=55 published=20
+2026-03-26 12:44:33,712 | WARNING | __main__ | CryptoPanic returned 429. Falling back to RSS feeds for this poll.
+2026-03-26 12:44:34,692 | INFO | __main__ | RSS fallback poll completed fetched=55 published=0
+2026-03-26 12:44:34,692 | INFO | __main__ | CryptoPanic poll completed fetched=55 published=0
+2026-03-26 12:45:36,640 | WARNING | __main__ | CryptoPanic returned 429. Falling back to RSS feeds for this poll.
+2026-03-26 12:45:37,801 | INFO | __main__ | RSS fallback poll completed fetched=55 published=0
+2026-03-26 12:45:37,801 | INFO | __main__ | CryptoPanic poll completed fetched=55 published=0
+2026-03-26 12:46:39,737 | WARNING | __main__ | CryptoPanic returned 429. Falling back to RSS feeds for this poll.
+2026-03-26 12:46:41,005 | INFO | __main__ | RSS fallback poll completed fetched=55 published=0
+2026-03-26 12:46:41,006 | INFO | __main__ | CryptoPanic poll completed fetched=55 published=0
+2026-03-26 12:47:42,936 | WARNING | __main__ | CryptoPanic returned 429. Falling back to RSS feeds for this poll.
+2026-03-26 12:47:43,965 | INFO | __main__ | RSS fallback poll completed fetched=55 published=0
+2026-03-26 12:47:43,965 | INFO | __main__ | CryptoPanic poll completed fetched=55 published=0
+2026-03-26 12:48:29,652 | INFO | __main__ | Received signal=15. Stopping CryptoPanic client.
+2026-03-26 12:48:29,657 | INFO | __main__ | CryptoPanic news ingestion stopped gracefully.
+
+[2026-03-26T12:48:42.362187+00:00] starting news_api_client with module src.news_api_client
+2026-03-26 12:48:42,678 | INFO | src.kafka_utils | Initialized Kafka producer for broker=localhost:19092 client_id=crypto-realtime-alert-data-ingestion
+2026-03-26 12:48:43,053 | WARNING | __main__ | CryptoPanic returned 429. Falling back to RSS feeds for this poll.
+2026-03-26 12:48:45,267 | INFO | __main__ | RSS fallback poll completed fetched=55 published=20
+2026-03-26 12:48:45,267 | INFO | __main__ | CryptoPanic poll completed fetched=55 published=20
+2026-03-26 12:49:47,203 | WARNING | __main__ | CryptoPanic returned 429. Falling back to RSS feeds for this poll.
+2026-03-26 12:49:48,989 | INFO | __main__ | RSS fallback poll completed fetched=55 published=0
+2026-03-26 12:49:48,989 | INFO | __main__ | CryptoPanic poll completed fetched=55 published=0
+2026-03-26 12:50:50,944 | WARNING | __main__ | CryptoPanic returned 429. Falling back to RSS feeds for this poll.
+2026-03-26 12:50:52,135 | INFO | __main__ | RSS fallback poll completed fetched=55 published=0
+2026-03-26 12:50:52,135 | INFO | __main__ | CryptoPanic poll completed fetched=55 published=0
+2026-03-26 12:51:54,522 | WARNING | __main__ | CryptoPanic returned 429. Falling back to RSS feeds for this poll.
+2026-03-26 12:51:56,185 | INFO | __main__ | RSS fallback poll completed fetched=55 published=0
+2026-03-26 12:51:56,186 | INFO | __main__ | CryptoPanic poll completed fetched=55 published=0
+2026-03-26 12:52:47,284 | INFO | __main__ | Received signal=15. Stopping CryptoPanic client.
+2026-03-26 12:52:47,291 | INFO | __main__ | CryptoPanic news ingestion stopped gracefully.
+
+[2026-03-26T12:52:58.176554+00:00] starting news_api_client with module src.news_api_client
+2026-03-26 12:52:58,698 | INFO | src.kafka_utils | Initialized Kafka producer for broker=localhost:19092 client_id=crypto-realtime-alert-data-ingestion
+2026-03-26 12:52:59,503 | WARNING | __main__ | CryptoPanic returned 429. Falling back to RSS feeds for this poll.
+2026-03-26 12:53:01,763 | INFO | __main__ | RSS fallback poll completed fetched=55 published=20
+2026-03-26 12:53:01,763 | INFO | __main__ | CryptoPanic poll completed fetched=55 published=20
+2026-03-26 12:54:03,904 | WARNING | __main__ | CryptoPanic returned 429. Falling back to RSS feeds for this poll.
+2026-03-26 12:54:05,605 | INFO | __main__ | RSS fallback poll completed fetched=55 published=0
+2026-03-26 12:54:05,605 | INFO | __main__ | CryptoPanic poll completed fetched=55 published=0
+2026-03-26 12:55:07,597 | WARNING | __main__ | CryptoPanic returned 429. Falling back to RSS feeds for this poll.
+2026-03-26 12:55:08,757 | INFO | __main__ | RSS fallback poll completed fetched=55 published=0
+2026-03-26 12:55:08,758 | INFO | __main__ | CryptoPanic poll completed fetched=55 published=0
+2026-03-26 12:56:10,762 | WARNING | __main__ | CryptoPanic returned 429. Falling back to RSS feeds for this poll.
+2026-03-26 12:56:12,128 | INFO | __main__ | RSS fallback poll completed fetched=55 published=0
+2026-03-26 12:56:12,128 | INFO | __main__ | CryptoPanic poll completed fetched=55 published=0
+2026-03-26 12:57:14,134 | WARNING | __main__ | CryptoPanic returned 429. Falling back to RSS feeds for this poll.
+2026-03-26 12:57:14,984 | INFO | __main__ | RSS fallback poll completed fetched=55 published=0
+2026-03-26 12:57:14,985 | INFO | __main__ | CryptoPanic poll completed fetched=55 published=0
+2026-03-26 12:58:16,978 | WARNING | __main__ | CryptoPanic returned 429. Falling back to RSS feeds for this poll.
+2026-03-26 12:58:17,966 | INFO | __main__ | RSS fallback poll completed fetched=55 published=0
+2026-03-26 12:58:17,966 | INFO | __main__ | CryptoPanic poll completed fetched=55 published=0
+2026-03-26 12:59:19,967 | WARNING | __main__ | CryptoPanic returned 429. Falling back to RSS feeds for this poll.
+2026-03-26 12:59:22,012 | INFO | __main__ | RSS fallback poll completed fetched=55 published=0
+2026-03-26 12:59:22,012 | INFO | __main__ | CryptoPanic poll completed fetched=55 published=0
+2026-03-26 13:00:24,022 | WARNING | __main__ | CryptoPanic returned 429. Falling back to RSS feeds for this poll.
+2026-03-26 13:00:25,359 | INFO | __main__ | RSS fallback poll completed fetched=55 published=0
+2026-03-26 13:00:25,359 | INFO | __main__ | CryptoPanic poll completed fetched=55 published=0
+2026-03-26 13:01:27,386 | WARNING | __main__ | CryptoPanic returned 429. Falling back to RSS feeds for this poll.
+2026-03-26 13:01:28,696 | INFO | __main__ | RSS fallback poll completed fetched=55 published=0
+2026-03-26 13:01:28,696 | INFO | __main__ | CryptoPanic poll completed fetched=55 published=0
+2026-03-26 13:02:30,714 | WARNING | __main__ | CryptoPanic returned 429. Falling back to RSS feeds for this poll.
+2026-03-26 13:02:32,677 | INFO | __main__ | RSS fallback poll completed fetched=55 published=0
+2026-03-26 13:02:32,678 | INFO | __main__ | CryptoPanic poll completed fetched=55 published=0
+2026-03-26 13:03:34,704 | WARNING | __main__ | CryptoPanic returned 429. Falling back to RSS feeds for this poll.
+2026-03-26 13:03:35,778 | INFO | __main__ | RSS fallback poll completed fetched=55 published=0
+2026-03-26 13:03:35,778 | INFO | __main__ | CryptoPanic poll completed fetched=55 published=0
+2026-03-26 13:04:37,808 | WARNING | __main__ | CryptoPanic returned 429. Falling back to RSS feeds for this poll.
+2026-03-26 13:04:38,918 | INFO | __main__ | RSS fallback poll completed fetched=55 published=0
+2026-03-26 13:04:38,918 | INFO | __main__ | CryptoPanic poll completed fetched=55 published=0
+2026-03-26 13:05:40,936 | WARNING | __main__ | CryptoPanic returned 429. Falling back to RSS feeds for this poll.
+2026-03-26 13:05:42,342 | INFO | __main__ | RSS fallback poll completed fetched=55 published=0
+2026-03-26 13:05:42,342 | INFO | __main__ | CryptoPanic poll completed fetched=55 published=0
+2026-03-26 13:06:44,386 | WARNING | __main__ | CryptoPanic returned 429. Falling back to RSS feeds for this poll.
+2026-03-26 13:06:46,184 | INFO | __main__ | RSS fallback poll completed fetched=55 published=0
+2026-03-26 13:06:46,184 | INFO | __main__ | CryptoPanic poll completed fetched=55 published=0
+2026-03-26 13:07:48,212 | WARNING | __main__ | CryptoPanic returned 429. Falling back to RSS feeds for this poll.
+2026-03-26 13:07:49,480 | INFO | __main__ | RSS fallback poll completed fetched=55 published=0
+2026-03-26 13:07:49,480 | INFO | __main__ | CryptoPanic poll completed fetched=55 published=0

@@ -43,6 +43,11 @@ class ProcessRuntime:
 
 MANAGED_PROCESSES: tuple[ManagedProcess, ...] = (
     ManagedProcess(
+        name="spark_pipeline",
+        module="src.spark_pipeline",
+        workdir=ROOT_DIR / "stream_processing",
+    ),
+    ManagedProcess(
         name="news_api_client",
         module="src.news_api_client",
         workdir=ROOT_DIR / "data_ingestion",
@@ -51,11 +56,6 @@ MANAGED_PROCESSES: tuple[ManagedProcess, ...] = (
         name="price_ws_client",
         module="src.price_ws_client",
         workdir=ROOT_DIR / "data_ingestion",
-    ),
-    ManagedProcess(
-        name="spark_pipeline",
-        module="src.spark_pipeline",
-        workdir=ROOT_DIR / "stream_processing",
     ),
 )
 

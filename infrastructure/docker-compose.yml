@@ -92,6 +92,25 @@ services:
     volumes:
       - redis_data:/data
 
+  redisinsight:
+    image: ${REDISINSIGHT_IMAGE}:${REDISINSIGHT_IMAGE_TAG}
+    container_name: ${COMPOSE_PROJECT_NAME}-redisinsight
+    restart: unless-stopped
+    depends_on:
+      redis:
+        condition: service_healthy
+    environment:
+      RI_APP_HOST: 0.0.0.0
+      RI_REDIS_HOST: redis
+      RI_REDIS_PORT: 6379
+      RI_REDIS_ALIAS: ${COMPOSE_PROJECT_NAME}-redis
+    ports:
+      - "${REDISINSIGHT_PORT}:5540"
+    networks:
+      - crypto-alert-network
+    volumes:
+      - redisinsight_data:/data
+
   clickhouse:
     image: ${CLICKHOUSE_IMAGE}:${CLICKHOUSE_IMAGE_TAG}
     container_name: ${COMPOSE_PROJECT_NAME}-clickhouse
@@ -117,6 +136,22 @@ services:
       - clickhouse_data:/var/lib/clickhouse
       - clickhouse_log:/var/log/clickhouse-server
 
+  kafka-ui:
+    image: ${KAFKA_UI_IMAGE}:${KAFKA_UI_IMAGE_TAG}
+    container_name: ${COMPOSE_PROJECT_NAME}-kafka-ui
+    restart: unless-stopped
+    depends_on:
+      kafka:
+        condition: service_healthy
+    environment:
+      DYNAMIC_CONFIG_ENABLED: "false"
+      KAFKA_CLUSTERS_0_NAME: ${KAFKA_UI_CLUSTER_NAME}
+      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka:${KAFKA_INTERNAL_PORT}
+    ports:
+      - "${KAFKA_UI_PORT}:8080"
+    networks:
+      - crypto-alert-network
+
 networks:
   crypto-alert-network:
     driver: bridge
@@ -126,5 +161,6 @@ volumes:
   zookeeper_log:
   kafka_data:
   redis_data:
+  redisinsight_data:
   clickhouse_data:
   clickhouse_log:

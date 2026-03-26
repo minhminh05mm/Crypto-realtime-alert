@@ -1,12 +1,48 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
 # Python
 .venv/
+venv/
 __pycache__/
 *.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
 
-# Spark/Java cache
+# Runtime artifacts
+.runtime/
+*.log
+*.pid
+
+# Spark / JVM / local state
 .ivy2/
 checkpoint/
+/tmp/
+*.jar
 
-# OS
+# OS / editor
 .DS_Store
 Thumbs.db
+.idea/
+.vscode/
+
+# Local-only documentation and demo notes
+/Code chay file.txt
+/HUONG_DAN_THEM_TELEGRAM_ALERT.txt
+/HUONG_DAN_XEM_DB_LOCALHOST.txt
+/RUN_PY_FLOW.md
+/TONG_QUAN_DU_AN.md
+/TONG_QUAN_DU_AN.txt
+
+# Local-only generated diagrams / images
+/run_py_flow.png
+/system_architecture_overview.png
+/system_architecture_overview_vi.png
+
+# Optional local scripts for generating private docs/assets
+/generate_overview_diagrams.py
