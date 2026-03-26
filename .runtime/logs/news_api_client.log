@@ -1736,3 +1736,6 @@ requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: http
 2026-03-26 13:07:48,212 | WARNING | __main__ | CryptoPanic returned 429. Falling back to RSS feeds for this poll.
 2026-03-26 13:07:49,480 | INFO | __main__ | RSS fallback poll completed fetched=55 published=0
 2026-03-26 13:07:49,480 | INFO | __main__ | CryptoPanic poll completed fetched=55 published=0
+2026-03-26 13:08:51,524 | WARNING | __main__ | CryptoPanic returned 429. Falling back to RSS feeds for this poll.
+2026-03-26 13:08:52,831 | INFO | __main__ | RSS fallback poll completed fetched=55 published=0
+2026-03-26 13:08:52,831 | INFO | __main__ | CryptoPanic poll completed fetched=55 published=0

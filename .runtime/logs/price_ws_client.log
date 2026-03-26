@@ -2165,3 +2165,4 @@ kafka.errors.KafkaTimeoutError: KafkaTimeoutError: Expiring 3 record(s) for Topi
 2026-03-26 13:07:53,096 | INFO | __main__ | Published 4300 price events to Kafka.
 2026-03-26 13:08:12,836 | INFO | __main__ | Published 4400 price events to Kafka.
 2026-03-26 13:08:33,115 | INFO | __main__ | Published 4500 price events to Kafka.
+2026-03-26 13:08:54,156 | INFO | __main__ | Published 4600 price events to Kafka.
